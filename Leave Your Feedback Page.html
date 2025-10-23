@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Your Feedback Page</title>
+    <!--<link href="https://db.onlinewebfonts.com/c/a18ecb4456d9f8b848dedbe113b08cc0?family=Monocraft" rel="stylesheet">-->
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            margin: 10px; padding: 10px;
+            border: 1px #eee solid;
+        }
+
+        body .container {
+            max-width: 360px;
+        }
+
+        .feedback-booth-1-rating :is(small) {
+            position: absolute; transform: translateY(-13px) translateX(-18px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container feedback">
+        <form action="" method="post">
+            <h1>Comment your FeedBack</h1>
+            <div class="feedback-personal-field container">
+                <h2>Personal Information</h2>
+
+                <div class="feedback-gender-field container">
+                    <label for="feedback-gender">Gender</label>
+                    <select name="feedback-gender" id="feedback-gender">
+                        <option value="null">Not Prefer to Say</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="lgbtqia">LGBTQIA+</option>
+                    </select>
+                </div>
+
+                <div class="feedback-age-field container">
+                    <label for="feedback-age">Age</label>
+                    <input type="text" name="feedback-age" id="feedback-age" pattern="\d{1,3}" title="please type an integer">
+                </div>
+
+            </div>
+            <div class="feedback-booth-field container">
+                <h2>Booth Rating & Comment</h2>
+                <div class="feedback-booth-rating-field container">
+                    <h3>Rating &star;</h3>
+                    <div class="feedback-booth-1-rating">
+                        <label for="feedback-booth-1-rating">Booth 1</label>
+                        <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-1" value="1" required>
+                        <small>1</small>
+                        <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-2" value="2" required>
+                        <small>2</small>
+                        <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-3" value="3" required>
+                        <small>3</small>
+                        <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-4" value="4" required>
+                        <small>4</small>
+                        <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-5" value="5" required>
+                        <small style="padding-left: 5px;">5</small>
+                    </div>
+                    <div class="feedback-booth-2-rating">
+                        <label for="feedback-booth-2-rating">Booth 2</label>
+                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-1" value="1" required>
+                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-2" value="2" required>
+                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-3" value="3" required>
+                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-4" value="4" required>
+                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-5" value="5" required>
+                    </div>
+                    <div class="feedback-booth-3-rating">
+                        <label for="feedback-booth-3-rating">Booth 3</label>
+                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-1" value="1" required>
+                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-2" value="2" required>
+                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-3" value="3" required>
+                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-4" value="4" required>
+                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-5" value="5" required>
+                    </div>
+                    <div class="feedback-booth-4-rating">
+                        <label for="feedback-booth-4-rating">Booth 4</label>
+                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-1" value="1" required>
+                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-2" value="2" required>
+                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-3" value="3" required>
+                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-4" value="4" required>
+                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-5" value="5" required>
+                    </div>
+                </div>
+                <div class="feedback-favorite-booth-field container">
+                    <label for="feedback-favorite-booth">Favorite Booth</label>
+                    <select name="favorite_booth" id="feedback-favorite-booth">
+                        <option value="0">None</option>
+                        <option value="1">Booth 1</option>
+                        <option value="2">Booth 2</option>
+                        <option value="3">Booth 3</option>
+                        <option value="4">Booth 4</option>
+                    </select>
+                </div>
+                <div class="container feedback-additional-field container">
+                    <label for="feedback-additional-comment">Additional Feedback</label><br>
+                    <textarea name="comment" id="feedback-additional-comment" placeholder="Comment..."></textarea>
+                </div>
+            </div>
+
+            <div class="feedback-consent-field container">
+                <h3>Consent for Personal Data (PDPA)</h3>
+                <p>
+                    By submitting this form, you agree to allow us to collect and use your personal information (such as gender, age, and feedback)
+                    solely for improving the festival experience. Your data will be kept confidential and not shared with third parties.
+                </p>
+                <label>
+                    <input type="checkbox" name="pdpa_consent" required>
+                    I have read and consent to the collection and use of my personal data in accordance with the PDPA.
+                </label>
+            </div>
+            <div class="container">
+                <button type="reset">Clear</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        fetch data
+    </div>
+</body>
+
+</html>
