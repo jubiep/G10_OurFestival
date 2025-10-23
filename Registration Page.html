@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'monocraft';
+        }
+
+        body .container {
+            max-width: fit-content;
+            height: 100vh;
+            justify-self: center;
+            align-self: center;
+            align-content: center;
+        }
+
+        .container fieldset {
+            position: inherit;
+            padding: 15px;
+        }
+
+        .container :is(legend) {
+            font-size: 2rem;
+        }
+
+        .container :is(input) {
+            border: none;
+            border-bottom-style: dotted;
+        }
+
+        .container :is(button) {
+            border: none;
+            font-family: 'monocraft';
+        }
+
+        .btn-rg-block {
+            width: 100%;
+            padding-top: 10px;
+            flex-direction: row;
+        }
+
+        .container :is(select) {
+            border: none;
+            font-family: 'monocraft';
+        }
+
+        .rg-block {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .rg-block input {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Register Form</legend>
+            <form action="" method="post">
+                <div class="rg-block">
+                    <label for="register-name">Name*</label>
+                    <input type="text" name="name" id="register-name" required>
+                </div>
+                <div class="rg-block">
+                    <label for="register-name">Email</label>
+                    <input type="email" name="email" id="register-email" pattern="^[A-Za-z].{2,}@+.+\.[A-Za-z]+$"
+                        title="It's not seem like an email address.">
+                </div>
+                <div class="rg-block">
+                    <label for="register-age">Age*</label>
+                    <input type="age" name="age" id="register-age" pattern="\d{1,3}"
+                        title="Age must be an integer refer to human age of yours" required>
+                </div>
+                <div class="rg-block">
+                    <label for="register-gender">Gender</label>
+                    <select name="gender" id="register-gender">
+                        <option value="">Not Prefer to say</option>
+                        <option value="female">Female &female;</option>
+                        <option value="male">Male &male;</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="rg-block-checkbox">
+                    <label for="register-pdpa-acception"><a
+                            href="https://drive.google.com/file/d/1vAZvotYGYdkrOIeTEJUMlLRd77PO-fA_/view">PDPA
+                            Accept</a>
+                    </label>
+                    <input type="checkbox" name="pdpa" id="register-pdpa-acception" required>
+                </div>
+                <div class="btn-rg-block">
+                    <button type="reset" id="register-reset">Reset</button>
+                    <button type="submit" id="register-submit">Submit!</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</body>
+
+</html>
