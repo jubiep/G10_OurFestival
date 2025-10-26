@@ -1,0 +1,49 @@
+/*:root {
+    --bg-light-pinker: #ffc3d2;
+    --bg-light-pink: #ffeaef;
+    --bg-lighter-pink: #fff3f6;
+    --font-sub-title: #d86b90;
+    --font-title: #badd7f;
+    --font-p: #feb4c6;
+    font-size: 16px;
+}*/
+
+.container {
+  padding: 0 10px;
+}
+
+.feedback-booth-1-rating small {
+  position: absolute;
+  transform: translateY(-10px) translateX(4px);
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1080px) {
+
+  #page-title {
+    font-size: 4rem;
+  }
+
+  .feedback-form, .recent-feedback {
+    padding: 10vh 20vw;
+    max-width: 35%;
+  }
+
+  form {
+    position: absolute;
+    left: 60vw;
+    top: 10vh;
+  }
+
+  .feedback-consent-field {
+    max-width: 51%;
+  }
+
+  .recent-feedback {
+    pointer-events: none;
+    padding: 0 20vw;
+    position: relative;
+    top: -15vh;
+  }
+}
