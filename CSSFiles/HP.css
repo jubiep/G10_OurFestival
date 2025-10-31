@@ -1,0 +1,103 @@
+
+.four-cate h2 {
+    color: #fa9fb5;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8%;
+}
+.four-cate h4 {
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+    
+}
+.four-cate p {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.four-cate {
+    margin: 8% 0;
+}
+.btn-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 130% ;
+}
+.cate-btn {
+    padding: 8px;
+    border-radius: 50px;
+    width: 30px;
+    max-height: 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cate-btn:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+.cate-area {
+    justify-content: center;
+    display: flex;
+}
+.cate img {
+    margin-top: -50%;
+    border: 1px solid black;
+}
+.cate {
+    border-radius: 20px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    margin-top: 50px;
+    padding: 10%;
+    height: 500px;
+    width: 200px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.cate:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+#cate-1{
+    background-color: #f7efda ;
+    box-shadow: 18px -4px 0px -1px rgba(207,164,96,0.54);
+}
+
+#cate-btn-1:hover{
+    background-color: rgba(207,164,96,0.54) ;
+}
+
+#cate-2{
+    background-color: #feb4c6 ;
+    box-shadow: 18px -4px 0px -1px rgba(233,125,160,0.54);
+}
+
+#cate-btn-2:hover{
+    background-color: rgba(233,125,160,0.54) ;
+}
+
+#cate-3{
+    background-color: #ffd8e1 ;
+    box-shadow: 18px -4px 0px -1px rgba(251,144,178,0.54);
+}
+
+#cate-btn-3:hover {
+    background-color: rgba(251,144,178,0.54);
+}
+
+#cate-4{
+    background-color: #efaca4;
+    box-shadow: 18px -4px 0px -1px rgba(199,40,21,0.54);
+}
+
+#cate-btn-4:hover {
+    background-color: rgba(199,40,21,0.54);
+}

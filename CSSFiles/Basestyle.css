@@ -1,9 +1,12 @@
 h2 {
     font-family: "Caprasimo", sans-serif;
 }
-h3 {
+h4 {
     font-family: "Archivo Black", sans-serif;
 }
 p {
     font-family: "Quicksand", sans-serif;
+}
+body {
+    background-color: #fff3f6;
 }
