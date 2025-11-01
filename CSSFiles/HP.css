@@ -1,4 +1,55 @@
+.hero-section {
+  position: relative;
+  height: 280px;
+  background: url("../MediaFiles/G5.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.drink-img {
+  width: 220px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  margin-top: 200px;
+}
+main h2 {
+  color: #badd7f;
+  font-size: 2rem;
+  margin-top: 70px;
+  text-align: center;
+}
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 60px 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.box {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.box h4 {
+  font-size: 1.4rem;
+  color: #33aa44;
+  margin: 0;
+}
+
+.box p {
+  color: #fa9fb5;
+  font-weight: 600;
+  line-height: 1.7;
+  max-width: 360px;
+  margin: 0;
+  padding: 0 6px;
+  word-break: break-word;
+}
 .four-cate h2 {
     color: #fa9fb5;
     display: flex;
