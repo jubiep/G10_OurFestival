@@ -17,7 +17,7 @@
     margin: 0;
 }
 .four-cate {
-    margin: 8% 0;
+    padding: 8% 0;
 }
 .btn-area {
     display: flex;
@@ -43,6 +43,7 @@
 .cate-area {
     justify-content: center;
     display: flex;
+    padding: 0;
 }
 .cate img {
     margin-top: -50%;
