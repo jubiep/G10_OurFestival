@@ -60,6 +60,34 @@
     </main>
     <!-- //จบ Homepage ส่วน2 -->
 
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-12 left-bg"></div>
+            <div class="col-lg-1 col-md-1 col-sm-12 left2-bg"></div>
+            <div class="col-lg-1 col-md-1 d-none d-md-block bar-left"></div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 main-content">
+                <div class="container">
+                    <div class="circle1"> </div>
+                    <div class="circle2"> </div>
+                    <img src="MediaFiles/G1.png" id="bubble-bg">
+                    <img src="MediaFiles/demo - gadget.png" id="mainImage" class="main-image" alt="Main">
+                </div>
+            </div>
+
+            <div class="col-lg-1 col-md-1 d-none d-md-block bar-right ms-auto">
+                    <div class="numbers">
+                        <span data-img="MediaFiles/demo-beverage.png">01</span>
+                        <span data-img="MediaFiles/demo - cake.png">02</span>
+                        <span data-img="MediaFiles/demo - photobooth.png">03</span>
+                        <span data-img="MediaFiles/demo - gadget.png">04</span>
+                    </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-12 right-bg ms-auto"></div>
+        </div>
+  </div>
+
     <div class="container content" >
 
         <div class = "four-cate">
@@ -155,6 +183,16 @@
       </div>
     </footer>
 
+    <script>
+    const numbers = document.querySelectorAll('.numbers span');
+    const mainImage = document.getElementById('mainImage');
 
+    numbers.forEach(num => {
+      num.addEventListener('mouseenter', () => {
+        const newImg = num.getAttribute('data-img');
+        mainImage.src = newImg;
+      });
+    });
+  </script>
 </body>
 </html>
