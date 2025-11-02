@@ -70,3 +70,35 @@ body {
   color: #ffeef2;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
 }
+
+.footer {
+  background-color: #f6aab8;
+  padding: 40px 60px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-content {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+.footer-social {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 50px;
+  border-radius: 50%;      
+  background-color: white;
+  transition: all 0.3s ease;
+  object-fit: cover;        
+  margin-top: -90px; 
+  padding: 3px;  
+}
+
