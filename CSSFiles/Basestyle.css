@@ -10,3 +10,63 @@ p {
 body {
     background-color: #fff3f6;
 }
+.navbar-leftstyle {
+  width: 65%;
+  background-color: #ffc3d2;
+  border-radius: 0 0 5px 0;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow-x: hidden;
+}
+.navbar-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-logo img {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0) invert(1); 
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05);
+  filter: brightness(0) invert(0.8);
+}
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.05rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #ffeef2;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+}
