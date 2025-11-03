@@ -189,6 +189,7 @@ main h2 {
     background-color: rgba(199,40,21);
     color: white;
     transition: 0.3s;
+}
 #cate-btn-4:hover {
     background-color: rgba(199,40,21,0.54);
 }
@@ -216,6 +217,7 @@ main h2 {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  opacity: 0.4;
 }
 .left2-bg {
   background-image: url('../MediaFiles/G3.png');
@@ -242,7 +244,7 @@ main h2 {
   background-color: #ffeaef;
   height: 100vh;
   width: 50px !important; 
-  flex-direction: column;
+  flex-direction: column ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -256,11 +258,13 @@ main h2 {
   justify-content: center;
   text-align: center;
 }
+
 #bubble-img {
   display: block;
   width: 100%;
   height: auto;
 }
+
 @media (max-width: 1024px) {
   .left-bg,
   .blue-bar {
@@ -312,6 +316,10 @@ main h2 {
   z-index: 10;
 }
 
+.main-image.pop {
+  transform: scale(1.1);
+}
+
 @keyframes pop {
   0% {
     transform: scale(1);
@@ -324,10 +332,14 @@ main h2 {
   }
 }
 .numbers {
-  display: flex;
-  flex-direction: column;
+  font-family: Instrument Serif;
+  font-weight: bold;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 5px !important;
+  height: 100%; 
 }
 
 .numbers span {
@@ -342,13 +354,13 @@ main h2 {
 
 .numbers span:hover {
   color: #a4034c;
-  transform: scale(1.2);
+  transform: scale(3);
+
 }
 @media (max-width: 768px) {
   body {
     flex-direction: column;
   }
-}
 
   .container {
     flex-direction: column;
@@ -365,4 +377,60 @@ main h2 {
     max-width: 90%;
     height: auto;
   }
+}
+.text-bg {
+  background-color: #ffe6ee;
+  padding: 20px 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  display: inline-block;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 0px;          
+  transform: translateY(-50%);  
+  z-index: 200;
+  color: #d04a7c;
+  text-align: left;
+}
+
+.hero-text h3 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #d86b90;
+}
+
+.hero-text h1 {
+  font-size: 108px;
+  font-weight: bolder;
+  color: #badd7f;
+  font-family: Instrument Serif;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: 200px;
+  margin-bottom: 15px;
+  border: 2px solid #f5a3c2;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  color: #555;
+  background: transparent;
+}
+
+.search-container i {
+  color: #e64a8a;
+  font-size: 16px;
 }
