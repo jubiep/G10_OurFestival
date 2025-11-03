@@ -8,147 +8,176 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSSFiles/Basestyle.css">
     <link rel="stylesheet" href="./CSSFiles/Feedback.css">
 </head>
 
 <body>
-    <div class="container feedback-form">
-        <!--Form-->
-        <h1 id="page-title">Comment your Feedback</h1>
-        <form action="" method="post">
-            <h2>Personal Information</h2> <!--Personal Information--> 
-            <div class="feedback-personal-field">
-
-                <!--Gender-->
-                <div class="feedback-gender-field">
-                    <label for="feedback-gender">Gender</label>
-                    <select name="feedback-gender" id="feedback-gender">
-                        <option value="">Not Prefer to Say</option>
-                        <option value="female">Female</option>
-                        <option value="male">Male</option>
-                        <option value="lgbtqiaplus">LGBTQIA+</option>
-                    </select>
-                </div>
-
-                <!--Age-->
-                <div class="feedback-age-field">
-                    <label for="feedback-age">Age</label>
-                    <input type="text" name="feedback-age" id="feedback-age" pattern="\d{1,3}"
-                        title="please type an integer">
-                </div>
-
-            </div>
-            <div class="feedback-booth-field">
-                <h2>Booth Rating & Comment</h2> <!--Booth Rating-->
-                <div class="feedback-booth-rating-field">
-                    <h3>Rating &star;</h3>
-                    <div class="feedback-booth-1-rating">
-                        <label for="feedback-booth-1-rating">Booth 1</label>
-                        <label for="feedback-booth-rating-radio-1">
-                            <small>1</small>
-                            <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-1" value="1" required>                            
-                        </label>
-
-                        <label for="feedback-booth-rating-radio-2">
-                            <small>2</small>
-                            <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-2" value="2" required>
-                        </label>
-
-                        <label for="feedback-booth-rating-radio-3">
-                            <small>3</small>
-                            <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-3" value="3" required>
-                        </label>
-
-                        <label for="feedback-booth-rating-radio-4">
-                            <small>4</small>
-                            <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-4" value="4" required>
-                        </label>
-
-                        <label for="feedback-booth-rating-radio-5">
-                            <small>5</small>
-                            <input type="radio" name="feedback-booth-1-rating" id="feedback-booth-rating-radio-5" value="5" required>
-                        </label>
-
-                    </div>
-                    <div class="feedback-booth-2-rating">
-                        <label for="feedback-booth-2-rating">Booth 2</label>
-                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-1" value="1"
-                            required>
-                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-2" value="2"
-                            required>
-                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-3" value="3"
-                            required>
-                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-4" value="4"
-                            required>
-                        <input type="radio" name="feedback-booth-2-rating" id="feedback-booth-rating-radio-5" value="5"
-                            required>
-                    </div>
-                    <div class="feedback-booth-3-rating">
-                        <label for="feedback-booth-3-rating">Booth 3</label>
-                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-1" value="1"
-                            required>
-                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-2" value="2"
-                            required>
-                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-3" value="3"
-                            required>
-                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-4" value="4"
-                            required>
-                        <input type="radio" name="feedback-booth-3-rating" id="feedback-booth-rating-radio-5" value="5"
-                            required>
-                    </div>
-                    <div class="feedback-booth-4-rating">
-                        <label for="feedback-booth-4-rating">Booth 4</label>
-                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-1" value="1"
-                            required>
-                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-2" value="2"
-                            required>
-                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-3" value="3"
-                            required>
-                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-4" value="4"
-                            required>
-                        <input type="radio" name="feedback-booth-4-rating" id="feedback-booth-rating-radio-5" value="5"
-                            required>
-                    </div>
-                </div>
-                <div class="feedback-favorite-booth-field">
-                    <label for="feedback-favorite-booth">Favorite Booth</label> <!--Favorite Booth-->
-                    <select name="favorite_booth" id="feedback-favorite-booth">
-                        <option value="0">None</option>
-                        <option value="1">Booth 1</option>
-                        <option value="2">Booth 2</option>
-                        <option value="3">Booth 3</option>
-                        <option value="4">Booth 4</option>
-                    </select>
-                </div>
-                <div class="feedback-additional-field">
-                    <label for="feedback-additional-comment">Additional Feedback</label><br> <!--Comment-->
-                    <textarea name="comment" id="feedback-additional-comment" placeholder="Comment..."></textarea>
-                </div>
-            </div>
-
-            <div class="feedback-consent-field">
-                <h3>Consent for Personal Data (PDPA)</h3> <!--PDPA-->
+    <div class="container my-4 feedback-form">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h2>Have a question?</h2>
+                <p>If you have any questions or feedback about the festival, please let us know by filling out the form.</p>
+                <h4>Consent for Personal Data (PDPA)</h4>
                 <p>
-                    &nbsp;&nbsp; By submitting this form, you agree to allow us to collect and use your personal
-                    information (such as
-                    gender, age, and feedback)
-                    solely for improving the festival experience. Your data will be kept confidential and not shared
-                    with third parties.
+                    By submitting this form, you agree to allow us to collect and use your personal information (such as gender, age, and feedback) solely for improving the festival experience. Your data will be kept confidential and not shared with third parties.
                 </p>
-                <label>
-                    <input type="checkbox" name="pdpa_consent" required>
-                    I have read and consent to the collection and use of my personal data in accordance with the PDPA.
-                </label>
             </div>
-            <div class="container">
-                <button type="reset">Clear</button>
-                <button type="submit">Submit</button>
+            <div class="col-md-6">
+                <form id="feedback-form" action="" method="post">
+                    <div class="mb-3">
+                        <label for="feedback-gender" class="form-label">Gender</label>
+                        <select name="feedback-gender" id="feedback-gender" class="form-select">
+                            <option value="">Not Prefer to Say</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="lgbtqiaplus">LGBTQIA+</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="feedback-age" class="form-label">Age</label>
+                        <input type="text" name="feedback-age" id="feedback-age" pattern="\d{1,3}" title="please type an integer" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Booth Ratings</label>
+                        <div class="mb-2">
+                            <label for="feedback-booth-1-rating" class="form-label">Booth 1</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-1" value="1" required>
+                                    <label class="form-check-label" for="booth1-rating-1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-2" value="2" required>
+                                    <label class="form-check-label" for="booth1-rating-2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-3" value="3" required>
+                                    <label class="form-check-label" for="booth1-rating-3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-4" value="4" required>
+                                    <label class="form-check-label" for="booth1-rating-4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-5" value="5" required>
+                                    <label class="form-check-label" for="booth1-rating-5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="feedback-booth-2-rating" class="form-label">Booth 2</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-1" value="1" required>
+                                    <label class="form-check-label" for="booth2-rating-1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-2" value="2" required>
+                                    <label class="form-check-label" for="booth2-rating-2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-3" value="3" required>
+                                    <label class="form-check-label" for="booth2-rating-3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-4" value="4" required>
+                                    <label class="form-check-label" for="booth2-rating-4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-5" value="5" required>
+                                    <label class="form-check-label" for="booth2-rating-5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="feedback-booth-3-rating" class="form-label">Booth 3</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-1" value="1" required>
+                                    <label class="form-check-label" for="booth2-rating-1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-2" value="2" required>
+                                    <label class="form-check-label" for="booth2-rating-2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-3" value="3" required>
+                                    <label class="form-check-label" for="booth2-rating-3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-4" value="4" required>
+                                    <label class="form-check-label" for="booth2-rating-4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-5" value="5" required>
+                                    <label class="form-check-label" for="booth2-rating-5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="feedback-booth-4-rating" class="form-label">Booth 4</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-1" value="1" required>
+                                    <label class="form-check-label" for="booth4-rating-1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-2" value="2" required>
+                                    <label class="form-check-label" for="booth4-rating-2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-3" value="3" required>
+                                    <label class="form-check-label" for="booth4-rating-3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-4" value="4" required>
+                                    <label class="form-check-label" for="booth4-rating-4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-5" value="5" required>
+                                    <label class="form-check-label" for="booth4-rating-5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="feedback-favorite-booth" class="form-label">Favorite Booth</label>
+                        <select name="favorite_booth" id="feedback-favorite-booth" class="form-select">
+                            <option value="0">None</option>
+                            <option value="1">Booth 1</option>
+                            <option value="2">Booth 2</option>
+                            <option value="3">Booth 3</option>
+                            <option value="4">Booth 4</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="feedback-additional-comment" class="form-label">Additional Feedback</label>
+                        <textarea name="comment" id="feedback-additional-comment" class="form-control" placeholder="Comment..." rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" name="pdpa_consent" id="pdpa-consent" class="form-check-input" required>
+                        <label class="form-check-label" for="pdpa-consent">
+                            I have read and consent to the collection and use of my personal data in accordance with the PDPA.
+                        </label>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="reset" class="btn btn-secondary">Clear</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
-    <div class="container recent-feedback">
-        <h2>Recent Feedback</h2>
+    <div class="container">
+        <h4>Recent Feedback</h4>
         <div id="feedback-list">...</div>
     </div>
     <script src="./JSFiles/feedback.js"></script>

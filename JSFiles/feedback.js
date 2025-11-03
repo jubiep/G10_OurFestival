@@ -1,71 +1,160 @@
-// author: wirakorn thanabat
-// feedback.js
-// this script will fake db and receive input from form then fake push to db.
+// Handle form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const feedbackForm = document.getElementById('feedback-form');
+    
+    if (feedbackForm) {
+        feedbackForm.addEventListener('submit', handleFormSubmit);
+    }
+    
+    // Load and display recent feedback on page load
+    loadRecentFeedback();
+});
 
-let mockDatabase = []; // fake db
+// Function to handle form submission
+async function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    // Collect form data
+    const formData = {
+        gender: document.getElementById('feedback-gender').value || 'Not Prefer to Say',
+        age: document.getElementById('feedback-age').value || 'N/A',
+        booth1Rating: getSelectedRadioValue('feedback-booth-1-rating'),
+        booth2Rating: getSelectedRadioValue('feedback-booth-2-rating'),
+        booth3Rating: getSelectedRadioValue('feedback-booth-3-rating'),
+        booth4Rating: getSelectedRadioValue('feedback-booth-4-rating'),
+        favoriteBooth: document.getElementById('feedback-favorite-booth').value || '0',
+        comment: document.getElementById('feedback-additional-comment').value || 'No comment',
+        timestamp: new Date().toISOString()
+    };
+    
+    try {
+        // Send data to PHP endpoint to save as txt file
+        const response = await fetch('./PHPFiles/save_feedback.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            alert('Your submission has been saved.');
+            // feedbackForm.reset();
+            // Reload recent feedback to show the new submission
+            loadRecentFeedback();
+        } else {
+            alert('Error saving feedback: ' + result.error);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error saving feedback.');
+    }
+}
 
-function renderFeedback() {
-    const list = document.getElementById("feedback-list");
-    list.innerHTML = "";
+// Helper function to get selected radio button value
+function getSelectedRadioValue(name) {
+    const radios = document.querySelectorAll(`input[name="${name}"]`);
+    for (const radio of radios) {
+        if (radio.checked) {
+            return radio.value;
+        }
+    }
+    return 'N/A';
+}
 
-    if (mockDatabase.length === 0) {
-        list.innerHTML = "<p>No feedback yet...</p>";
+// Function to fetch and display recent feedback
+async function loadRecentFeedback() {
+    const feedbackList = document.getElementById('feedback-list');
+    
+    if (!feedbackList) {
         return;
     }
-
-    // new first
-    mockDatabase.slice().reverse().forEach((fb, index) => {
-        const item = document.createElement("div");
-        item.classList.add("feedback-item");
-        item.innerHTML = `
-            <p><strong>Gender:</strong> ${fb.gender}
-            &nbsp;<strong>Age:</strong> ${fb.age} </p>
-            <p><strong>Booth Ratings:</strong> 
-                ${Object.entries(fb.ratings)
-                    .map(([booth, rate]) => `${booth}: ${rate}`)
-                    .join(", ")}</p>
-            <p><strong>Favorite Booth:</strong> ${fb.favorite}</p>
-            <p><strong>Comment:</strong> ${fb.comment || "—"}</p>
-            <hr>
-        `;
-        list.appendChild(item);
-    });
-}
-
-function handleSubmit(event) {
-    event.preventDefault(); //
-
-    const gender = document.getElementById("feedback-gender").value;
-    const age = document.getElementById("feedback-age").value;
-    const favorite = document.getElementById("feedback-favorite-booth").value;
-    const comment = document.getElementById("feedback-additional-comment").value;
-
-    const ratings = {}; // sum rating
-    for (let i = 1; i <= 4; i++) {
-        const checked = document.querySelector(
-            `input[name="feedback-booth-${i}-rating"]:checked`
-        );
-        ratings[`Booth ${i}`] = checked ? checked.value : "-";
+    
+    try {
+        // Fetch list of feedback files
+        const response = await fetch('./PHPFiles/get_feedback.php');
+        const result = await response.json();
+        
+        if (result.success && result.feedback.length > 0) {
+            // Display feedback entries
+            feedbackList.innerHTML = '';
+            
+            // Sort by timestamp (most recent first)
+            const sortedFeedback = result.feedback.sort((a, b) => {
+                return new Date(b.timestamp) - new Date(a.timestamp);
+            });
+            
+            // Show only the 10 most recent feedback entries
+            const recentFeedback = sortedFeedback.slice(0, 10);
+            
+            recentFeedback.forEach((feedback, index) => {
+                const feedbackCard = createFeedbackCard(feedback, index + 1);
+                feedbackList.appendChild(feedbackCard);
+            });
+        } else {
+            feedbackList.innerHTML = '<p>No feedback submitted yet. Be the first to leave feedback!</p>';
+        }
+    } catch (error) {
+        console.error('Error loading feedback:', error);
+        feedbackList.innerHTML = '<p>Error loading feedback. Please try again later.</p>';
     }
-
-    const feedback = {
-        gender,
-        age,
-        ratings,
-        favorite: favorite === "0" ? "None" : `Booth ${favorite}`,
-        comment,
-        timestamp: new Date().toISOString(),
-    };
-
-    mockDatabase.push(feedback); //fake db push <--------------------------------------------
-
-    renderFeedback(); //refresh
-
-    event.target.reset(); //clear
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", handleSubmit); // bind listener to form
-    renderFeedback(); //load feedback
-});
+// Function to create a feedback card element
+function createFeedbackCard(feedback, index) {
+    const card = document.createElement('div');
+    card.className = 'feedback-card mb-3 p-3 border rounded';
+    card.style.backgroundColor = 'var(--bg-lighter-pink)';
+    
+    const favoriteBoothText = feedback.favoriteBooth === '0' ? 'None' : `Booth ${feedback.favoriteBooth}`;
+    const date = new Date(feedback.timestamp);
+    const formattedDate = date.toLocaleString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+    
+    card.innerHTML = `
+        <div class="d-flex justify-content-between align-items-start mb-2">
+            <h6 class="mb-0">Feedback #${index}</h6>
+            <small class="text-muted">${formattedDate}</small>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <p class="mb-1"><strong>Gender:</strong> ${feedback.gender}</p>
+                <p class="mb-1"><strong>Age:</strong> ${feedback.age}</p>
+            </div>
+            <div class="col-md-6">
+                <p class="mb-1"><strong>Favorite Booth:</strong> ${favoriteBoothText}</p>
+            </div>
+        </div>
+        <div class="mb-2">
+            <strong>Booth Ratings:</strong>
+            <div class="ms-3">
+                <p class="mb-0">Booth 1: ${feedback.booth1Rating}/5</p>
+                <p class="mb-0">Booth 2: ${feedback.booth2Rating}/5</p>
+                <p class="mb-0">Booth 3: ${feedback.booth3Rating}/5</p>
+                <p class="mb-0">Booth 4: ${feedback.booth4Rating}/5</p>
+            </div>
+        </div>
+        ${feedback.comment && feedback.comment !== 'No comment' ? 
+            `<div class="mt-2">
+                <strong>Comment:</strong>
+                <p class="mb-0 ms-2">${escapeHtml(feedback.comment)}</p>
+            </div>` : ''
+        }
+    `;
+    
+    return card;
+}
+
+// Helper function to escape HTML to prevent XSS
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
