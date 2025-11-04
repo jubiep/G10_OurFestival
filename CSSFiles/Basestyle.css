@@ -24,6 +24,7 @@ p {
   z-index: 100;
   overflow-x: hidden;
 }
+
 .navbar-logo {
   position: absolute;
   left: 20px;
@@ -40,9 +41,8 @@ p {
   object-fit: contain;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
-
 .navbar-logo img:hover {
   transform: scale(1.05);
   filter: brightness(0) invert(0.8);
@@ -50,8 +50,6 @@ p {
 .navbar-menu {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 40px;
   margin: 0;
   padding: 0;
@@ -65,12 +63,59 @@ p {
   font-family: "Poppins", sans-serif;
   transition: 0.3s ease;
 }
-
 .navbar-menu li a:hover {
   color: #ffeef2;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
 }
+.navbar-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 101;
+}
+@media (max-width: 768px) {
+  .navbar-leftstyle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 25px;
+  }
 
+  .navbar-logo {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed; 
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: #ffc3d2;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 0;
+    display: none;
+    border-radius: 0 0 10px 10px;
+    z-index: 200; 
+    transition: all 0.3s ease;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .navbar-menu li a {
+    font-size: 1.2rem;
+  }
+}
 .footer {
   background-color: #f6aab8;
   padding: 40px 60px;
