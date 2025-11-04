@@ -8,9 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSSFiles/Basestyle.css">
     <link rel="stylesheet" href="./CSSFiles/Booth1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Booth1 Page</title>
 </head>
-<body>
+<body class="body">
     <!-- Navbar -->
 <nav class="navbar-leftstyle">
   <div class="navbar-logo">
@@ -26,35 +27,143 @@
   </ul>
 </nav>
 <!-- จบ Navbar -->
- <!-- footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>About us</h3>
-          <p>
-            gjfldkmvfdmv;vkd<br />gf;lvkd;sv;v;vfm<br />fskvmsvms;vmvk<br />bfvkvkvmvklvmfk
-          </p>
-        </div>
-            <div class="footer-section">
-          <h3>Contract</h3>
-          <p>
-            gjfldkmvfdmv;vkd<br />gf;lvkd;sv;v;vfm<br />fskvmsvms;vmvk<br />bfvkvkvmvklvmfk
-          </p>
-        </div>
-        <div class="footer-section">
-          <h3>All Product & Service</h3>
-          <p>
-            gjfldkmvfdkvgk;f;lvkd;sv;v;vfm<br />fskvmsvms;vmvkbfvkvkvmvklvmfk
-          </p>
-        </div>
+
+<!-- Container for the image gallery -->
+<div class="container menu">
+
+  <!-- Full-width images with number text -->
+  <div class="row">
+
+    <div class="col-8 col-md-6 col-lg-3 g-4 order-1 order-md-1 order-lg-1 menu-img">
+
+      <div class="mySlides">
+        <div class="numbertext"><p>1 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
       </div>
-      <div class="footer-social">
-        <a href="#"><img src="MediaFiles/facebook.png" alt="Facebook" /></a>
-        <a href="#"><img src="MediaFiles/instagram.png" alt="Instagram" /></a>
-        <a href="#"><img src="MediaFiles/tik-tok.png" alt="TikTok" /></a>
-        <a href="#"><img src="MediaFiles/twitter.png" alt="X" /></a>
+      <div class="mySlides">
+        <div class="numbertext"><p>2 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
       </div>
-    </footer>
-    <!-- จบ footer -->
+      <div class="mySlides">
+        <div class="numbertext"><p>3 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext"><p>4 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext"><p>5 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext"><p>6 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext"><p>7 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext"><p>8 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext"><p>9 / 9</p></div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+
+    </div>
+
+    <div class="col-8 col-md-6 col-lg-3 g-4 menu-info">
+      <!-- Image text -->
+      <div class="caption-container">
+        <h4 id="caption"></h4>
+        <P id="caption-desc"></P>
+        
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Thumbnail images -->
+  <div class="row row-w3">
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3 ">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(1)" alt="STRAWBERRY YOGURT SMOOTHIE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(2)" alt="BLUE HAWAII YOGURT SMOOTHIE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(3)" alt="KIWI YOGURT SMOOTHIE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(4)" alt="MATCHA FREPPE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(5)" alt="STRAWBERRY MATCHA" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(6)" alt="MATCHA ESPRESSO" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(7)" alt="MATCHA LATTE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem "">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(8)" alt="MATCHA MILK TEA" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(9)" alt="CARAMEL MATCHA LATTE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+    </div>
+  </div>
+
+</div>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>About us</h3>
+      <p>
+        gjfldkmvfdmv;vkd<br />gf;lvkd;sv;v;vfm<br />fskvmsvms;vmvk<br />bfvkvkvmvklvmfk
+      </p>
+    </div>
+        <div class="footer-section">
+      <h3>Contract</h3>
+      <p>
+        gjfldkmvfdmv;vkd<br />gf;lvkd;sv;v;vfm<br />fskvmsvms;vmvk<br />bfvkvkvmvklvmfk
+      </p>
+    </div>
+    <div class="footer-section">
+      <h3>All Product & Service</h3>
+      <p>
+        gjfldkmvfdkvgk;f;lvkd;sv;v;vfm<br />fskvmsvms;vmvkbfvkvkvmvklvmfk
+      </p>
+    </div>
+  </div>
+  <div class="footer-social">
+    <a href="#"><img src="MediaFiles/facebook.png" alt="Facebook" /></a>
+    <a href="#"><img src="MediaFiles/instagram.png" alt="Instagram" /></a>
+    <a href="#"><img src="MediaFiles/tik-tok.png" alt="TikTok" /></a>
+    <a href="#"><img src="MediaFiles/twitter.png" alt="X" /></a>
+  </div>
+</footer>
+<!-- จบ footer -->
+
+<script src="JSFiles/booth1.js"></script>
+
 </body>
 </html>
