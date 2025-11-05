@@ -37,54 +37,70 @@
   <!-- Full-width images with number text -->
   <div class="row">
 
-    <div class="col-8 col-md-6 col-lg-3 g-4 order-1 order-md-1 order-lg-1 menu-img">
-
-      <div class="mySlides">
-        <div class="numbertext"><p>1 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext"><p>2 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext"><p>3 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext"><p>4 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext"><p>5 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext"><p>6 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext"><p>7 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext"><p>8 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-      <div class="mySlides">
-        <div class="numbertext"><p>9 / 9</p></div>
-        <img src="/MediaFiles/demo-cake.png">
-      </div>
-
-    </div>
-
-    <div class="col-8 col-md-6 col-lg-3 g-4 menu-info">
+    <div class="col-8 col-md-6 col-lg-3 g-4 order-2 order-md-1 order-lg-1 menu-info">
       <!-- Image text -->
       <div class="caption-container">
         <h4 id="caption"></h4>
         <P id="caption-desc"></P>
+
+        <div class="rating-bar-container">
+          <div class="rating-bar">
+              <span class="rating-label"><p>Sweetness</p></span>
+              <div class="rating-stars" id="sweetness-rating" data-max="10"></div>
+          </div>
+        <div class="rating-bar">
+            <span class="rating-label"><p>Bitterness</p></span>
+            <div class="rating-stars" id="bitterness-rating" data-max="10"></div>
+        </div>
+      </div>
         
       </div>
+    </div>
+    
+
+    <div class="col-8 col-md-6 col-lg-3 g-4 order-1 order-md-2 order-lg-2 menu-img">
+      <!-- <div class="recommended"></div> -->
+      <div class="mySlides">
+        <div class="recommended-tag">
+          <img src="/MediaFiles/b12-recommended.png" alt="recommended" class="recommended-img">
+        </div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+
+      <div class="mySlides">
+        <div class="recommended-tag">
+          <img src="/MediaFiles/b12-recommended.png" alt="recommended" class="recommended-img">
+        </div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+
+      <div class="mySlides">
+        <div class="recommended-tag">
+          <img src="/MediaFiles/b12-recommended.png" alt="recommended" class="recommended-img">
+        </div>
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+
+      <div class="mySlides">
+        <img src="/MediaFiles/b1-iced matcha frappe.png">
+      </div>
+      <div class="mySlides">
+        <img src="/MediaFiles/b1-strawberrymatcha.png">
+      </div>
+      <div class="mySlides">
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+      <div class="mySlides">
+        <img src="/MediaFiles/demo-cake.png">
+      </div>
+
     </div>
 
   </div>
@@ -97,39 +113,66 @@
   <div class="row row-w3">
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3 ">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(1)" alt="STRAWBERRY YOGURT SMOOTHIE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(1)" 
+      alt="STRAWBERRY YOGURT SMOOTHIE" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="8"  data-bitterness="2">
     </div>
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(2)" alt="BLUE HAWAII YOGURT SMOOTHIE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(2)" 
+      alt="BLUE HAWAII YOGURT SMOOTHIE" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="2"  data-bitterness="8">
     </div>
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(3)" alt="KIWI YOGURT SMOOTHIE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(3)" 
+      alt="KIWI YOGURT SMOOTHIE" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="10"  data-bitterness="5">
     </div>
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(4)" alt="MATCHA FREPPE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+      <img class="demo cursor" src="/MediaFiles/b1-iced matcha frappe.png" onclick="currentSlide(4)" 
+      alt="MATCHA FREPPE" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="4"  data-bitterness="7">
     </div>
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(5)" alt="STRAWBERRY MATCHA" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+      <img class="demo cursor" src="/MediaFiles/b1-strawberrymatcha.png" onclick="currentSlide(5)" 
+      alt="STRAWBERRY MATCHA" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="8"  data-bitterness="2">
     </div>
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(6)" alt="MATCHA ESPRESSO" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(6)" 
+      alt="MATCHA ESPRESSO" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="5"  data-bitterness="5">
     </div>
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(7)" alt="MATCHA LATTE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem "">
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(7)" 
+      alt="MATCHA LATTE" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="9"  data-bitterness="1">
     </div>
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(8)" alt="MATCHA MILK TEA" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png"  onclick="currentSlide(8)" 
+      alt="MATCHA MILK TEA" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="2"  data-bitterness="5">
     </div>
     <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
       <div class="product-label"></div>
-      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(9)" alt="CARAMEL MATCHA LATTE" data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem ">
+      <img class="demo cursor" src="/MediaFiles/demo-cake.png" onclick="currentSlide(9)" 
+      alt="CARAMEL MATCHA LATTE" 
+      data-description="Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem"
+      data-sweetness="6"  data-bitterness="8">
     </div>
   </div>
 
