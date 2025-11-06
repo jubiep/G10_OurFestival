@@ -128,7 +128,8 @@ main h2 {
 
 .cate-img {
     margin-top: -50%;
-    border: 1px solid black;
+    min-height: 150px;
+    width: 100%;
 }
 .cate {
     border-radius: 20px;
