@@ -1,13 +1,19 @@
-.menu {
+/* .menu {
     margin: 20% 0;
-}
+} */
 * {
   box-sizing: border-box;
+}
+
+.navbar-leftstyle {
+  position: sticky;
+  margin-bottom: 5%;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
+  margin-bottom: 15%;
 }
 .row {
   justify-content: center;
@@ -16,6 +22,8 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
+  height: 300px;
+  width: auto;
 }
 
 .mySlides img{
@@ -139,6 +147,9 @@
     width: calc(var(--flower-size) * var(--flower-count)); 
     height: var(--flower-size);
     overflow: hidden;
+    background-color: #ffc3d2;
+    border-radius: 20px;
+    
 
     /*gray flower*/
     background-image: var(--svg-flower-empty); 
@@ -189,9 +200,6 @@
 .column-w3 {
   max-width: 70px;
   max-height: 70px;
-  padding-top: 20px ;
-
-
 }
 
 /* Add a transparency effect for thumnbail images */
@@ -210,7 +218,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 6px; /* ความสูงของแถบสีเขียว */
+  height: 5px; /* ความสูงของแถบสีเขียว */
   max-width: 70px;
   min-width: 50px;
   background-color: #4CAF50; /* สีเขียวของแถบ */
@@ -219,7 +227,7 @@
   justify-content: center;
   font-size: 12px;
   z-index: 10; /* ให้แถบอยู่ข้างบนสุด */
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   display: none;
   position: relative;
 }
