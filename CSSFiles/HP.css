@@ -175,8 +175,23 @@ main h2 {
 
 .btn-area {
     display: flex;
-    justify-content: center;
-    margin-top: 90% ;
+    justify-content: center;;
+}
+
+#btn-area-1 {
+  margin-top: 50%;
+}
+
+#btn-area-2 {
+  margin-top: 85%;
+}
+
+#btn-area-3 {
+  margin-top: 85%;
+}
+
+#btn-area-4 {
+  margin-top: 50%;
 }
 
 .cate-btn {
