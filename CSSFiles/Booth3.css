@@ -1,0 +1,157 @@
+.photo-section {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  text-align: left;
+  padding-bottom: 100px;
+  
+}
+.photo-rectangle {
+  position: absolute;
+  top: 120px;
+  left: 85%;
+  width: 650px;
+  height: 400px;
+  background-color:#f7efda; 
+  z-index: 0; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.photo-stack img {
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.photo1 {
+  top: 5%;
+  left: 85%;
+  max-width: 450px;
+  transform: rotate(-8deg);
+  z-index: 1;
+  position: sticky;
+}
+.photo2{
+  top: 5%;
+  left: 115%;
+  max-width: 500px;
+  transform: rotate(9deg);
+  z-index: 2;
+  position: sticky;
+}
+.photo3 {
+  top: 40%;
+  left: 90%;
+  max-width: 300px;
+  transform: rotate(-15deg);
+  z-index: 3;
+  position: sticky;
+}
+.photo4 {
+  top: 45%;
+  left: 110%;
+  transform: rotate(10deg);
+  width: 50%;
+  max-width: 320px;
+  z-index: 5;
+  position: sticky;
+}
+
+.photo-stack img:hover {
+  transform: scale(1.2) rotate(0deg) translateY(-10px);
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  .photo-stack {
+    max-width: 350px;
+    height: 300px;
+  }
+
+  .photo {
+    width: 70%;
+    max-width: 180px;
+  }
+
+  .photo:nth-child(1),
+  .photo:nth-child(2),
+  .photo:nth-child(3),
+  .photo:nth-child(4) {
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  .photo:hover {
+    transform: scale(1.15) translateY(-10px);
+  }
+}
+
+.booth3-topic {
+  font-family: Quicksand;
+  font-weight: 700;
+  font-size: 100px;
+  color: #ffd4dc;
+  margin-top: 50px;
+  padding-top: 25px;
+  margin-left: 70px;
+}
+
+.photo-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.topic1 {
+  font-family: Quicksand;
+  font-weight: bold;
+  color: #d86b90;
+  font-size: 20px;
+  margin-top: 5px;
+  padding-top: 25px;
+  margin-left: 120px;
+}
+
+ul {
+  list-style-type: disc; 
+  padding-left: 25px; 
+  color: #d86b90;
+  font-family: Quicksand;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-left: 110px;
+}
+@media (max-width: 1024px) {
+  .booth3-topic {
+    font-size: 80px;
+  }
+  .photo-section {
+    flex-direction: column;
+  }
+  .photo-bg {
+    max-width: 500px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booth3-topic {
+    font-size: 60px;
+    text-align: center;
+  }
+  .photo-description {
+    text-align: center;
+  }
+  .photo-stack img {
+    width: 80%;
+    max-width: 250px;
+    position: relative;
+    transform: none;
+    display: block;
+    margin: 10px auto;
+  }
+  .photo-rectangle {
+    height: auto;
+    min-height: 300px;
+  }
+}
+
