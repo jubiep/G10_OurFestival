@@ -498,16 +498,19 @@ main h2 {
 .name-role {
   display: flex;
   justify-content: center;
-  margin: 5% 0;
+  margin-bottom: 5%;
+  position: relative;
 }
 .name-role p {
   font-family: "Bai Jamjuree", sans-serif;
+  color: #d86b90;
 }
 
 .name-role h4 {
   font-size: 20px;
   text-align: center;
   margin-bottom: 10%;
+  color: #d86b90;
 }
 
 .name {
@@ -516,6 +519,13 @@ main h2 {
 
 .role {
   padding: 5%;
-  background-color: #badd7f;
+  background-color: rgba(255, 216, 225,0.8);
   border-radius: 20px;
+}
+
+.bg-name-role {
+  background: url('../MediaFiles/h-G02.png');
+  height: 300px;
+  z-index: 10;
+  margin-top: -20%;
 }
