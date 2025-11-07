@@ -494,3 +494,28 @@ main h2 {
   color: #e64a8a;
   font-size: 16px;
 }
+
+.name-role {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+}
+.name-role p {
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+.name-role h4 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.name {
+  min-width: 300px;
+}
+
+.role {
+  padding: 5%;
+  background-color: #badd7f;
+  border-radius: 20px;
+}
