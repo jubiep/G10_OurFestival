@@ -572,6 +572,7 @@ main h2 {
     display: flex;
     order: 3; /* place after main-content */
   }
+}
 
 .name-role {
   display: flex;
@@ -606,6 +607,4 @@ main h2 {
   height: 300px;
   z-index: 10;
   margin-top: -20%;
-}
-
 }
