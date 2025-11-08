@@ -144,8 +144,14 @@ main h2 {
     flex-direction: column;
 }
 
+.cate h4 {
+  color: #d86b90;
+}
 .cate p {
     margin-top: 30%;
+    color: #d86b90;
+    /* text-shadow: 2px 1px black; */
+    font-weight: 600;
 }
 
 .cate:hover {
@@ -187,11 +193,11 @@ main h2 {
 }
 
 #btn-area-3 {
-  margin-top: 85%;
+  margin-top: 70%;
 }
 
 #btn-area-4 {
-  margin-top: 50%;
+  margin-top: 55%;
 }
 
 .cate-btn {
@@ -246,9 +252,6 @@ main h2 {
     background-color: rgba(199,40,21);
     color: white;
     transition: 0.3s;
-}
-#cate-btn-4:hover {
-    background-color: rgba(199,40,21,0.54);
 }
 
 .row {
