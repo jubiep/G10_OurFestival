@@ -269,7 +269,7 @@ main h2 {
 }
 
 .left-bg {
-  background-image: url('../MediaFiles/h-G02-rorate.png');
+  background-image: url('../MediaFiles/h-G02-rorate.jpg');
   background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -572,5 +572,40 @@ main h2 {
     display: flex;
     order: 3; /* place after main-content */
   }
+
+.name-role {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  position: relative;
+}
+.name-role p {
+  font-family: "Bai Jamjuree", sans-serif;
+  color: #d86b90;
+}
+
+.name-role h4 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10%;
+  color: #d86b90;
+}
+
+.name {
+  min-width: 300px;
+}
+
+.role {
+  padding: 5%;
+  background-color: rgba(255, 216, 225,0.8);
+  border-radius: 20px;
+}
+
+.bg-name-role {
+  background: url('../MediaFiles/h-G02.png');
+  height: 300px;
+  z-index: 10;
+  margin-top: -20%;
+}
 
 }
