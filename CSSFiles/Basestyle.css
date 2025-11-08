@@ -226,10 +226,10 @@ html, body {
     justify-content: space-between;
   }
 
-  .navbar-logo {
-    position: relative;
-    left: 0;
-    transform: none;
+  .contact-info p,
+  .social-info p {
+    justify-content: center;  
+    font-size: 0.9rem;
   }
 
   html, body {
