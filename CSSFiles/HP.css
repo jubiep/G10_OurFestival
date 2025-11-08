@@ -500,10 +500,11 @@ main h2 {
     flex-direction: row !important;
     align-items: center;
     gap: 25px;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 0;
+    padding-left: 20px;
   }
 
   .main-image {
@@ -563,8 +564,8 @@ main h2 {
     height: auto !important;
     flex-direction: row ;
     position: relative;
-    transform-origin: center;
-    justify-content: center;
+    transform-origin: left center;
+    justify-content: flex-start;
     order: 3; 
     margin-top: 20px;
   }
