@@ -64,8 +64,7 @@ p {
   transition: 0.3s ease;
 }
 .navbar-menu li a:hover {
-  color: #ffeef2;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+  color: #ffeef2a4;
 }
 .navbar-toggle {
   display: none;
@@ -117,33 +116,124 @@ p {
   }
 }
 .footer {
-  background-color: #f6aab8;
-  padding: 40px 60px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  background-color: #f7a9d5; 
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+.footer-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #222;
 }
 .footer-content {
   display: flex;
-  gap: 80px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
   flex-wrap: wrap;
+  color: #111;
+  font-size: 1rem;
 }
-.footer-social {
+.contact-info p,
+.social-info p {
+  margin: 8px 0;
   display: flex;
-  gap: 20px;
-  justify-content: flex-end;
   align-items: center;
+  gap: 10px;
+}
+.footer i {
+  font-size: 1.2rem;
+}
+@media (max-width: 1024px) {
+  .footer-content {
+    gap: 60px;        
+    font-size: 0.95rem;
+  }
+
+  .footer-container h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; 
+    align-items: center;      
+    text-align: center;
+    gap: 25px;          
+  }
+
+  .footer-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info p,
+  .social-info p {
+    justify-content: center;  
+    font-size: 0.9rem;
+  }
+
+  .footer i {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 30px 15px;     
+  }
 }
 
-.footer-social img {
-  width: 50px;
-  border-radius: 50%;      
-  background-color: white;
-  transition: all 0.3s ease;
-  object-fit: cover;        
-  margin-top: -90px; 
-  padding: 3px;  
+
+@media (max-width: 480px) {
+  .footer-container h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-content {
+    gap: 20px;
+  }
+  .contact-info p,
+  .social-info p {
+    flex-direction: column; 
+    gap: 5px;
+  }
+}
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important; 
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .navbar-leftstyle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;              
+    width: 100% !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    justify-content: space-between;
+  }
+
+  .contact-info p,
+  .social-info p {
+    justify-content: center;  
+    font-size: 0.9rem;
+  }
+
+  html, body {
+    overflow-x: hidden !important;
+  }
 }
 
