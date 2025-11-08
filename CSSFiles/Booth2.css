@@ -1,0 +1,244 @@
+/* .menu {
+    margin: 20% 0;
+} */
+* {
+  box-sizing: border-box;
+}
+
+.navbar-leftstyle {
+  position: sticky;
+  margin-bottom: 5%;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin-bottom: 15%;
+}
+.row {
+  justify-content: center;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 300px;
+  width: auto;
+}
+
+.mySlides img{
+  width: 100%;
+  height: 100%;
+}
+.menu-img {
+  display: flex;
+  position: relative;
+}
+.slide-area {
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.menu-info {
+  display: flex;
+  align-items: center;
+}
+
+.recommended-tag{
+  position: absolute;
+  border-radius: 8px;
+  gap: 6px;
+  left: 70%;
+  top: -15%;
+}
+.recommended-tag {
+  min-width: 130px;
+}
+
+.recommended-img{
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 1%;
+  width: auto;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: -50px;
+  color: #4CAF50 ;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  text-decoration: none;
+  border-radius: 100%;
+  background-color: #e5e5e5;
+  font-family: "Caprasimo", sans-serif ;
+  transition: 0.3s;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #badd7f;
+  transition: 0.2s;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: end;
+  padding: 2px 16px;
+  color: white;
+}
+
+#caption {
+  color: #badd7f ;
+}
+
+#caption-desc{
+  color: #fa9fb5 ;
+}
+
+.rating-label p{
+  color: #4CAF50 ;
+}
+
+:root {
+    --flower-size: 20px;
+    --flower-count: 10;
+    --filled-color: #fa9fb5; /* สีชมพู */
+    --empty-color: #e5e5e5;  /* สีเทา */
+    
+
+    --svg-flower-empty: url("/MediaFiles/flower-empty.svg");
+    --svg-flower-filled: url("/MediaFiles/flower-filled.svg");
+}
+
+
+
+.rating-stars {
+  position: relative;
+  width: calc(var(--flower-size) * var(--flower-count)); 
+  height: var(--flower-size);
+  overflow: hidden;
+  background-color: #ffc3d2;
+  border-radius: 20px;
+  
+
+  /*gray flower*/
+  background-image: var(--svg-flower-empty); 
+  background-size: var(--flower-size) var(--flower-size); 
+  background-repeat: repeat-x;
+
+}
+
+.rating-stars::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: var(--rating-width); 
+  height: 100%;
+  
+  /*pink flower*/
+  background-image: var(--svg-flower-filled); 
+  background-size: var(--flower-size) var(--flower-size); 
+  background-repeat: repeat-x;
+  
+  overflow: hidden; 
+}
+
+.rating-stars::after {
+  content: '';
+  display: none;
+}
+
+.row-w3 {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: 0 !important;
+}
+.row-w3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column-w3 img {
+  float: left;
+  max-width: 70px
+}
+
+.column-w3 {
+  max-width: 95px;
+  max-height: 70px;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  width:100%;
+  height: 70px;
+  border: 3px solid #badd7f;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.product-label {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px; /* ความสูงของแถบสีเขียว */
+  max-width: 70px;
+  min-width: 50px;
+  background-color: #4CAF50; /* สีเขียวของแถบ */
+  display: flex; /* เพื่อจัดข้อความให้อยู่ตรงกลาง (ถ้ามี) */
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  z-index: 10; /* ให้แถบอยู่ข้างบนสุด */
+  margin-bottom: 3px;
+  display: none;
+  position: relative;
+}
+
+.product-label.active-label {
+    display: flex; /* แสดงแถบเมื่อมีคลาสนี้ */
+    /* ถ้ามีข้อความในแถบ (สามารถใส่โค้ดจัดข้อความตรงนี้) */
+    color: white; 
+    align-items: center;
+    justify-content: center;
+}
