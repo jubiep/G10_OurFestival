@@ -200,3 +200,40 @@ p {
     gap: 5px;
   }
 }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important; 
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  .navbar-leftstyle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;              
+    width: 100% !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    justify-content: space-between;
+  }
+
+  .navbar-logo {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  html, body {
+    overflow-x: hidden !important;
+  }
+}
+
