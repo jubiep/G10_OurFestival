@@ -27,22 +27,22 @@
 }
 
 .mySlides img{
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .menu-img {
   display: flex;
   position: relative;
 }
 .slide-area {
-    display: flex;
-    justify-content: center;
-    min-height: 300px;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
 }
 
 .menu-info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .recommended-tag{
@@ -143,41 +143,41 @@
 
 
 .rating-stars {
-    position: relative;
-    width: calc(var(--flower-size) * var(--flower-count)); 
-    height: var(--flower-size);
-    overflow: hidden;
-    background-color: #ffc3d2;
-    border-radius: 20px;
-    
+  position: relative;
+  width: calc(var(--flower-size) * var(--flower-count)); 
+  height: var(--flower-size);
+  overflow: hidden;
+  background-color: #ffc3d2;
+  border-radius: 20px;
+  
 
-    /*gray flower*/
-    background-image: var(--svg-flower-empty); 
-    background-size: var(--flower-size) var(--flower-size); 
-    background-repeat: repeat-x;
+  /*gray flower*/
+  background-image: var(--svg-flower-empty); 
+  background-size: var(--flower-size) var(--flower-size); 
+  background-repeat: repeat-x;
 
 }
 
 .rating-stars::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    width: var(--rating-width); 
-    height: 100%;
-    
-    /*pink flower*/
-    background-image: var(--svg-flower-filled); 
-    background-size: var(--flower-size) var(--flower-size); 
-    background-repeat: repeat-x;
-    
-    overflow: hidden; 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: var(--rating-width); 
+  height: 100%;
+  
+  /*pink flower*/
+  background-image: var(--svg-flower-filled); 
+  background-size: var(--flower-size) var(--flower-size); 
+  background-repeat: repeat-x;
+  
+  overflow: hidden; 
 }
 
 .rating-stars::after {
-    content: '';
-    display: none;
+  content: '';
+  display: none;
 }
 
 .row-w3 {

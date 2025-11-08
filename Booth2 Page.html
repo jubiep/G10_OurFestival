@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./CSSFiles/Basestyle.css">
     <link rel="stylesheet" href="./CSSFiles/BD.css">
+    <link rel="stylesheet" href="./CSSFiles/Booth2.css">
     <title>Booth2 Page</title>
 </head>
 <body class="body">
@@ -29,6 +30,150 @@
     </ul>
 </nav>
 <!-- จบ Navbar -->
+
+<div class="container menu">
+
+  <div class="row">
+
+    <div class="col-8 col-md-6 col-lg-3 g-4 order-2 order-md-1 order-lg-1 menu-info">
+     
+      <div class="caption-container">
+        <h4 id="caption"></h4>
+        <P id="caption-desc"></P>
+
+        <div class="rating-bar-container">
+          <div class="rating-bar">
+              <span class="rating-label"><p>Sweetness</p></span>
+              <div class="rating-stars" id="sweetness-rating" data-max="10"></div>
+          </div>
+        <div class="rating-bar">
+            <span class="rating-label"><p>Bitterness</p></span>
+            <div class="rating-stars" id="bitterness-rating" data-max="10"></div>
+        </div>
+      </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="col-8 col-md-6 col-lg-3 g-4 order-1 order-md-2 order-lg-2 menu-img">
+     
+      <div class="mySlides">
+        <div class="recommended-tag">
+          <img src="MediaFiles/b12-recommended.png" alt="recommended" class="recommended-img">
+        </div>
+        <img src="MediaFiles/b2-pannacotta.png">
+      </div>
+
+      <div class="mySlides">
+        <div class="recommended-tag">
+          <img src="MediaFiles/b12-recommended.png" alt="recommended" class="recommended-img">
+        </div>
+        <img src="MediaFiles/b2-brownie.png">
+      </div>
+
+      <div class="mySlides">
+        <div class="recommended-tag">
+          <img src="MediaFiles/b12-recommended.png" alt="recommended" class="recommended-img">
+        </div>
+        <img src="MediaFiles/b2-donut.png">
+      </div>
+
+      <div class="mySlides">
+        <img src="MediaFiles/b2-cheesecake.png">
+      </div>
+      <div class="mySlides">
+        <img src="MediaFiles/b2-tiramisu3.png">
+      </div>
+      <div class="mySlides">
+        <img src="MediaFiles/b2-croissant.png">
+      </div>
+      <div class="mySlides">
+        <img src="MediaFiles/b2-cookie.png">
+      </div>
+      <div class="mySlides">
+        <img src="MediaFiles/b2-daifuku.png">
+      </div>
+      <div class="mySlides">
+        <img src="MediaFiles/b2-taiyaki.png">
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div class="row row-w3">
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3 ">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-pannacotta.png"  onclick="currentSlide(1)" 
+      alt="PANNA COTTA" 
+      data-description="80 ฿"
+      data-sweetness="8"  data-bitterness="0">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-brownie.png" onclick="currentSlide(2)" 
+      alt="BROWNIE" 
+      data-description="65 ฿ per piece"
+      data-sweetness="7"  data-bitterness="3">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-donut.png" onclick="currentSlide(3)" 
+      alt="DONUT" 
+      data-description="45 ฿ per piece"
+      data-sweetness="9"  data-bitterness="0">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-cheesecake.png" onclick="currentSlide(4)" 
+      alt="CHEESE CAKE" 
+      data-description="95 ฿ per piece"
+      data-sweetness="7"  data-bitterness="3">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-tiramisu3.png" onclick="currentSlide(5)" 
+      alt="TIRAMISU" 
+      data-description="115 ฿ per piece"
+      data-sweetness="5"  data-bitterness="5">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-croissant.png" onclick="currentSlide(6)" 
+      alt="CROISSANT" 
+      data-description="60 ฿ per piece"
+      data-sweetness="5"  data-bitterness="0">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-cookie.png"  onclick="currentSlide(7)" 
+      alt="COOKIES" 
+      data-description="60 ฿ per piece"
+      data-sweetness="8"  data-bitterness="2">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-daifuku.png"  onclick="currentSlide(8)" 
+      alt="DAIFUKU" 
+      data-description="40 ฿ per piece"
+      data-sweetness="8"  data-bitterness="0">
+    </div>
+    <div class="col-2 col-md-1 col-lg-1 g-2 column-w3">
+      <div class="product-label"></div>
+      <img class="demo cursor" src="MediaFiles/b2-taiyaki.png" onclick="currentSlide(9)" 
+      alt="TAIYAKI" 
+      data-description="75 ฿ per piece"
+      data-sweetness="7"  data-bitterness="0">
+    </div>
+  </div>
+
+</div>
+
 <!-- footer -->
 <footer class="footer">
   <div class="footer-content">
@@ -65,6 +210,11 @@
       </div>
     </footer>
     <!-- จบ footer -->
+<<<<<<< HEAD
 <script src="JSFiles/basestyle.js"></script>  
+=======
+  <script src="JSFiles/booth1.js"></script>
+  <script src="JSFiles/basestyle.js"></script>  
+>>>>>>> 2239d675af8de00912cd22af0910a892de16e321
 </body>
 </html>

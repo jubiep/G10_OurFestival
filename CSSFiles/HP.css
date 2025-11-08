@@ -324,18 +324,6 @@ main h2 {
   height: auto;
 }
 
-@media (max-width: 1024px) {
-  .left-bg,
-  .blue-bar {
-    display: none;
-  }
-
-  .main-content {
-    height: auto;
-    padding: 40px 20px;
-  }
-}
-
 .container {
   position: relative;
   display: flex;
@@ -417,27 +405,7 @@ main h2 {
   transform: scale(3);
 
 }
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
 
-  .container {
-    flex-direction: column;
-  }
-
-  .numbers {
-    position: static;
-    flex-direction: row;
-    margin-top: 15px;
-    gap: 15px;
-  }
-
-  .main-image {
-    max-width: 90%;
-    height: auto;
-  }
-}
 .text-bg {
   background-color: #ffe6ee;
   padding: 20px 40px;
@@ -495,19 +463,133 @@ main h2 {
   font-size: 16px;
 }
 
+@media (max-width: 720px) {
+
+  .container-fluid {
+    width: 100%;
+    height: 1000px;
+  }
+
+  .left-bg,
+  #bubble-bg,
+  .right-bg,
+  .left2-bg {
+    display: none;
+  }
+  .main-content {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  body {
+    flex-direction: column;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .numbers {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+  }
+
+  .main-image {
+    /* Put image into normal document flow on small screens so numbers can sit below it */
+    position: static;
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+
+  .circle1 {
+  top: 70px;
+  width: 320px;
+  height: 320px;
+}
+ .circle2 {
+  top: 95px;
+  width: 260px;
+  height: 260px;
+}
+
+.hero-text {
+  position: absolute;   
+  z-index: 10;
+  color: #d04a7c;
+  top: 70px;                
+  left: 0;
+  transform: none;       
+  width: 100%;           
+  text-align: center;   
+  padding-top: 20px; 
+}
+
+.hero-text h3 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #d86b90;
+}
+
+.hero-text h1 {
+  font-size: 72px;
+  font-weight: bolder;
+  color: #badd7f;
+  font-family: Instrument Serif;
+}
+
+.search-container {
+  width: 250px;
+}
+
+  /* Ensure main-content doesn't force full viewport height on mobile so following columns stack below it */
+  .main-content {
+    background-color: #fef7f9;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    order: 2; /* keep main content before numbers */
+  }
+
+  .bar-right {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;        
+    justify-content: center;
+    align-items: center;
+    transform: none;    
+    background-color: #ffeaef;
+    display: flex;
+    order: 3; /* place after main-content */
+  }
+}
+
 .name-role {
   display: flex;
   justify-content: center;
-  margin: 5% 0;
+  margin-bottom: 5%;
+  position: relative;
 }
 .name-role p {
   font-family: "Bai Jamjuree", sans-serif;
+  color: #d86b90;
 }
 
 .name-role h4 {
   font-size: 20px;
   text-align: center;
   margin-bottom: 10%;
+  color: #d86b90;
 }
 
 .name {
@@ -516,6 +598,13 @@ main h2 {
 
 .role {
   padding: 5%;
-  background-color: #badd7f;
+  background-color: rgba(255, 216, 225,0.8);
   border-radius: 20px;
+}
+
+.bg-name-role {
+  background: url('../MediaFiles/h-G02.png');
+  height: 300px;
+  z-index: 10;
+  margin-top: -20%;
 }
