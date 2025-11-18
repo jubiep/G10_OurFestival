@@ -123,7 +123,7 @@ main h2 {
 .cate-area {
     justify-content: center;
     display: flex;
-    padding: 0;
+    padding: 0 !important;
 }
 
 .cate-img {
@@ -185,19 +185,19 @@ main h2 {
 }
 
 #btn-area-1 {
-  margin-top: 50%;
+  margin-top: 25%;
 }
 
 #btn-area-2 {
-  margin-top: 85%;
+  margin-top: 80%;
 }
 
 #btn-area-3 {
-  margin-top: 70%;
+  margin-top: 78%;
 }
 
 #btn-area-4 {
-  margin-top: 55%;
+  margin-top: 40%;
 }
 
 .cate-btn {

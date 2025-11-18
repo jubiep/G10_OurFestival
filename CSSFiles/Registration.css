@@ -4,6 +4,14 @@ body {
     background: #fdfaf6 url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png');
     color: #4b3b2c;
   }
+.navbar-leftstyle {
+  position: sticky;
+}
+
+.container-fluid {
+  margin-bottom: 5% !important;
+  margin-top: 8% !important;
+}
   .sidebar {
     background: #efe6db;
     min-height: 100vh;
