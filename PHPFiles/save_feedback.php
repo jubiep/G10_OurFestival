@@ -13,50 +13,51 @@ if (!$data) {
     exit;
 }
 
-// Prepare feedback data
-$gender = $data['gender'] ?? 'Not Prefer to Say';
-$age = $data['age'] ?? 'N/A';
-$booth1Rating = $data['booth1Rating'] ?? 'N/A';
-$booth2Rating = $data['booth2Rating'] ?? 'N/A';
-$booth3Rating = $data['booth3Rating'] ?? 'N/A';
-$booth4Rating = $data['booth4Rating'] ?? 'N/A';
-$favoriteBooth = $data['favoriteBooth'] ?? '0';
-$comment = $data['comment'] ?? 'No comment';
-$timestamp = $data['timestamp'] ?? date('Y-m-d H:i:s');
+// Prepare feedback entry
+$feedbackEntry = [
+    'timestamp' => $data['timestamp'] ?? date('Y-m-d H:i:s'),
+    'gender' => $data['gender'] ?? 'Not Prefer to Say',
+    'age' => $data['age'] ?? 'N/A',
+    'boothRatings' => [
+        'booth1' => $data['booth1Rating'] ?? 'N/A',
+        'booth2' => $data['booth2Rating'] ?? 'N/A',
+        'booth3' => $data['booth3Rating'] ?? 'N/A',
+        'booth4' => $data['booth4Rating'] ?? 'N/A'
+    ],
+    'favoriteBooth' => $data['favoriteBooth'] ?? '0',
+    'comment' => $data['comment'] ?? 'No comment'
+];
 
-// Create filename with timestamp
-$filename = 'feedback_' . date('Ymd_His') . '_' . uniqid() . '.txt';
-
-// Path to FeedbackData directory (relative to this PHP file)
-$feedbackDir = dirname(__DIR__) . '/FeedbackData/';
+// Directory + file path
+$feedbackDir = dirname(__DIR__) . '/JSONFiles/';
+$filepath = $feedbackDir . 'feedback.json';
 
 // Ensure directory exists
 if (!is_dir($feedbackDir)) {
     mkdir($feedbackDir, 0755, true);
 }
 
-$filepath = $feedbackDir . $filename;
+// Read existing data (if file exists)
+$existingData = [];
 
-// Format the feedback content
-$content = "Feedback Submission\n";
-$content .= "==================\n\n";
-$content .= "Timestamp: " . $timestamp . "\n";
-$content .= "Gender: " . $gender . "\n";
-$content .= "Age: " . $age . "\n\n";
-$content .= "Booth Ratings:\n";
-$content .= "  Booth 1: " . $booth1Rating . "/5\n";
-$content .= "  Booth 2: " . $booth2Rating . "/5\n";
-$content .= "  Booth 3: " . $booth3Rating . "/5\n";
-$content .= "  Booth 4: " . $booth4Rating . "/5\n\n";
-$content .= "Favorite Booth: " . ($favoriteBooth === '0' ? 'None' : 'Booth ' . $favoriteBooth) . "\n\n";
-$content .= "Additional Comment:\n";
-$content .= $comment . "\n";
+if (file_exists($filepath)) {
+    $json = file_get_contents($filepath);
+    $existingData = json_decode($json, true);
 
-// Save to file
-if (file_put_contents($filepath, $content)) {
+    // If corrupted or not an array, reset to empty array
+    if (!is_array($existingData)) {
+        $existingData = [];
+    }
+}
+
+// Append new feedback
+$existingData[] = $feedbackEntry;
+
+// Save back to file
+if (file_put_contents($filepath, json_encode($existingData, JSON_PRETTY_PRINT))) {
     echo json_encode([
         'success' => true,
-        'filename' => $filename,
+        'filename' => 'feedback.json',
         'message' => 'Feedback saved successfully'
     ]);
 } else {

@@ -1,0 +1,15 @@
+[
+    {
+        "timestamp": "2025-11-19T07:22:27.702Z",
+        "gender": "female",
+        "age": "18",
+        "boothRatings": {
+            "booth1": "5",
+            "booth2": "4",
+            "booth3": "5",
+            "booth4": "4"
+        },
+        "favoriteBooth": "1",
+        "comment": "Good Store!"
+    }
+]
