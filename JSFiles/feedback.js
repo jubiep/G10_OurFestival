@@ -41,8 +41,7 @@ async function handleFormSubmit(event) {
         
         if (result.success) {
             alert('Your submission has been saved.');
-            // feedbackForm.reset();
-            // Reload recent feedback to show the new submission
+            feedbackForm.reset(); // Reload recent feedback to show the new submission
             loadRecentFeedback();
         } else {
             alert('Error saving feedback: ' + result.error);
