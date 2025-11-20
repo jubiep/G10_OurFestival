@@ -37,30 +37,43 @@ if (!is_dir($feedbackDir)) {
     mkdir($feedbackDir, 0755, true);
 }
 
-// Read existing data (if file exists)
-$existingData = [];
+// Open file for reading and writing
+$fp = fopen($filepath, 'c+');
 
-if (file_exists($filepath)) {
-    $json = file_get_contents($filepath);
-    $existingData = json_decode($json, true);
+if (flock($fp, LOCK_EX)) {
+    // Read existing data
+    $fileSize = filesize($filepath);
+    $existingData = [];
 
-    // If corrupted or not an array, reset to empty array
-    if (!is_array($existingData)) {
-        $existingData = [];
+    if ($fileSize > 0) {
+        $json = fread($fp, $fileSize);
+        $existingData = json_decode($json, true);
+
+        // If corrupted or not an array, reset to empty array
+        if (!is_array($existingData)) {
+            $existingData = [];
+        }
     }
-}
 
-// Append new feedback
-$existingData[] = $feedbackEntry;
+    // Append new feedback
+    $existingData[] = $feedbackEntry;
 
-// Save back to file
-if (file_put_contents($filepath, json_encode($existingData, JSON_PRETTY_PRINT))) {
+    // Truncate file and write new data
+    ftruncate($fp, 0);
+    rewind($fp);
+    fwrite($fp, json_encode($existingData, JSON_PRETTY_PRINT));
+
+    // Release lock
+    flock($fp, LOCK_UN);
+    fclose($fp);
+
     echo json_encode([
         'success' => true,
         'filename' => 'feedback.json',
         'message' => 'Feedback saved successfully'
     ]);
 } else {
+    fclose($fp);
     echo json_encode([
         'success' => false,
         'error' => 'Failed to save feedback file'

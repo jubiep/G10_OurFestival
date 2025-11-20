@@ -35,6 +35,7 @@
     <div class="container my-4 feedback-field">
         <div class="row">
             <div class="col-md-6 mb-4">
+                <!-- Question & Consent for Personal Data (PDPA) -->
                 <h2>Have a question?</h2>
                 <p>If you have any questions or feedback about the festival, please let us know by filling out the form.</p>
                 <h4>Consent for Personal Data (PDPA)</h4>
@@ -43,6 +44,9 @@
                 </p>
             </div>
             <div class="col-md-6">
+
+                <!-- Feedback Form -->
+
                 <form id="feedback-form" action="" method="post">
                     <div class="mb-3">
                         <label for="feedback-gender" class="form-label">Gender</label>
@@ -59,9 +63,11 @@
                         <input type="text" name="feedback-age" id="feedback-age" pattern="\d{1,3}" title="please type an integer" class="form-control">
                     </div>
 
+                    <!-- Booth Ratings -->
                     <div class="mb-3">
                         <label class="form-label">Booth Ratings</label>
                         <div class="mb-2">
+                            <!-- Booth 1 Rating -->
                             <label for="feedback-booth-1-rating" class="form-label">Booth 1</label>
                             <div>
                                 <div class="form-check form-check-inline">
@@ -87,6 +93,7 @@
                             </div>
                         </div>
                         <div class="mb-2">
+                            <!-- Booth 2 Rating -->
                             <label for="feedback-booth-2-rating" class="form-label">Booth 2</label>
                             <div>
                                 <div class="form-check form-check-inline">
@@ -112,31 +119,33 @@
                             </div>
                         </div>
                         <div class="mb-2">
+                            <!-- Booth 3 Rating -->
                             <label for="feedback-booth-3-rating" class="form-label">Booth 3</label>
                             <div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-1" value="1" required>
-                                    <label class="form-check-label" for="booth2-rating-1">1</label>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-1" value="1" required>
+                                    <label class="form-check-label" for="booth3-rating-1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-2" value="2" required>
-                                    <label class="form-check-label" for="booth2-rating-2">2</label>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-2" value="2" required>
+                                    <label class="form-check-label" for="booth3-rating-2">2</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-3" value="3" required>
-                                    <label class="form-check-label" for="booth2-rating-3">3</label>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-3" value="3" required>
+                                    <label class="form-check-label" for="booth3-rating-3">3</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-4" value="4" required>
-                                    <label class="form-check-label" for="booth2-rating-4">4</label>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-4" value="4" required>
+                                    <label class="form-check-label" for="booth3-rating-4">4</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth2-rating-5" value="5" required>
-                                    <label class="form-check-label" for="booth2-rating-5">5</label>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-5" value="5" required>
+                                    <label class="form-check-label" for="booth3-rating-5">5</label>
                                 </div>
                             </div>
                         </div>
                         <div>
+                            <!-- Booth 4 Rating -->
                             <label for="feedback-booth-4-rating" class="form-label">Booth 4</label>
                             <div>
                                 <div class="form-check form-check-inline">
@@ -163,6 +172,7 @@
                         </div>
                     </div>
 
+                    <!-- Favorite Booth -->
                     <div class="mb-3">
                         <label for="feedback-favorite-booth" class="form-label">Favorite Booth</label>
                         <select name="favorite_booth" id="feedback-favorite-booth" class="form-select">
@@ -174,11 +184,13 @@
                         </select>
                     </div>
 
+                    <!-- Additional Feedback -->
                     <div class="mb-3">
                         <label for="feedback-additional-comment" class="form-label">Additional Feedback</label>
                         <textarea name="comment" id="feedback-additional-comment" class="form-control" placeholder="Comment..." rows="3"></textarea>
                     </div>
 
+                    <!-- PDPA Consent -->
                     <div class="mb-3 form-check">
                         <input type="checkbox" name="pdpa_consent" id="pdpa-consent" class="form-check-input" required>
                         <label class="form-check-label" for="pdpa-consent">
@@ -186,6 +198,7 @@
                         </label>
                     </div>
 
+                    <!-- Clear & Submit Button-->
                     <div class="d-flex justify-content-between">
                         <button type="reset" class="btn btn-secondary">Clear</button>
                         <button type="submit" class="btn btn-primary">Submit</button>

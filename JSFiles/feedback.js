@@ -1,7 +1,7 @@
+const feedbackForm = document.getElementById('feedback-form');
+
 // Handle form submission
 document.addEventListener('DOMContentLoaded', function() {
-    const feedbackForm = document.getElementById('feedback-form');
-    
     if (feedbackForm) {
         feedbackForm.addEventListener('submit', handleFormSubmit);
     }
@@ -28,7 +28,7 @@ async function handleFormSubmit(event) {
     };
     
     try {
-        // Send data to PHP endpoint to save as txt file
+        // Send data to PHP endpoint to save to json file
         const response = await fetch('./PHPFiles/save_feedback.php', {
             method: 'POST',
             headers: {
@@ -39,16 +39,19 @@ async function handleFormSubmit(event) {
         
         const result = await response.json();
         
+        // for tester, this not work correctly in Safari.
         if (result.success) {
+            // Reset form normally
             alert('Your submission has been saved.');
-            feedbackForm.reset(); // Reload recent feedback to show the new submission
+            feedbackForm.reset();
             loadRecentFeedback();
-        } else {
+        } else if (result.error){
             alert('Error saving feedback: ' + result.error);
         }
+
     } catch (error) {
-        console.error('Error:', error);
-        alert('Error saving feedback.');
+        console.error('error:', error);
+        alert('Something went wrong.');
     }
 }
 
@@ -117,27 +120,28 @@ function createFeedbackCard(feedback, index) {
         minute: '2-digit'
     });
     
+    // HTML card <<<
     card.innerHTML = `
         <div class="d-flex justify-content-between align-items-start mb-2">
             <h6 class="mb-0">Feedback #${index}</h6>
-            <small class="text-muted">${formattedDate}</small>
+            <small class="text-muted">${escapeHtml(formattedDate)}</small>
         </div>
         <div class="row mb-2">
             <div class="col-md-6">
-                <p class="mb-1"><strong>Gender:</strong> ${feedback.gender}</p>
-                <p class="mb-1"><strong>Age:</strong> ${feedback.age}</p>
+                <p class="mb-1"><strong>Gender:</strong> ${escapeHtml(feedback.gender)}</p>
+                <p class="mb-1"><strong>Age:</strong> ${escapeHtml(feedback.age)}</p>
             </div>
             <div class="col-md-6">
-                <p class="mb-1"><strong>Favorite Booth:</strong> ${favoriteBoothText}</p>
+                <p class="mb-1"><strong>Favorite Booth:</strong> ${escapeHtml(favoriteBoothText)}</p>
             </div>
         </div>
         <div class="mb-2">
             <strong>Booth Ratings:</strong>
             <div class="ms-3">
-                <p class="mb-0">Booth 1: ${feedback.booth1Rating}/5</p>
-                <p class="mb-0">Booth 2: ${feedback.booth2Rating}/5</p>
-                <p class="mb-0">Booth 3: ${feedback.booth3Rating}/5</p>
-                <p class="mb-0">Booth 4: ${feedback.booth4Rating}/5</p>
+                <p class="mb-0">Booth 1: ${escapeHtml(String(feedback.booth1Rating))}/5</p>
+                <p class="mb-0">Booth 2: ${escapeHtml(String(feedback.booth2Rating))}/5</p>
+                <p class="mb-0">Booth 3: ${escapeHtml(String(feedback.booth3Rating))}/5</p>
+                <p class="mb-0">Booth 4: ${escapeHtml(String(feedback.booth4Rating))}/5</p>
             </div>
         </div>
         ${feedback.comment && feedback.comment !== 'No comment' ? 
