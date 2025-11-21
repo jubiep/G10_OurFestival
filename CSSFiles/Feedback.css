@@ -46,10 +46,11 @@ body {
   padding-top: 10vh;
 }
 
-/* .feedback-field {
+.feedback-field {
   margin-top: 120px;
   margin-bottom: 50px;
-} */
+  position: relative;
+}
 
 .feedback-field h2,
 .feedback-field h4,
@@ -62,14 +63,18 @@ body {
   gap: 30px;
 }
 
+.feedback-field > .btn-primary {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .feedback-field .col-md-6, .col-lg-4, .col-md-4 {
   background-color: var(--fbf-bgc);
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
-
-
 
 #feedback-form .form-label {
   font-weight: 600;
