@@ -15,20 +15,20 @@
   --old-font-p: #dc9aad;
 }
 
-label {
+.feedback-field :is(label) {
   font-family: "Quicksand", sans-serif;
   color: var(--font-p);
 }
 
-h2 {
+.feedback-field :is(h2) {
   color: var(--font-title);
 }
 
-h4 {
+.feedback-field :is(h4) {
   color: var(--font-sub-sub-title);
 }
 
-p {
+.feedback-field :is(p) {
   color: var(--font-p);
 }
 
@@ -117,6 +117,17 @@ input[type="radio"].form-check-input {
 #feedback-form .btn-secondary:hover {
   background-color: var(--bg-light-pink);
   border-color: var(--bg-light-pink);
+}
+
+/* Check box styling */
+input[type="checkbox"].form-check-input {
+  background-color: var(--bg-light-pinkest);
+  border-color: var(--bg-light-pinker);
+}
+
+input[type="checkbox"].form-check-input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
 /* Clear & Submit spacing */
