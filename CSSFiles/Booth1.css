@@ -247,7 +247,7 @@
     justify-content: center;
 }
 
-/* --------------- Mobile Fix --------------- */
+/* Mobile Fix */
 @media (max-width: 576px) {
   .container.menu {
     padding-top: 80px;   /* กันไม่ให้ชน navbar */
@@ -266,4 +266,15 @@
   .menu-img {
     padding-bottom: 20px;
   }
+}
+
+/* Ipad Fix */
+@media (min-width: 577px) and (max-width: 1024px) {
+  .container.menu {
+    padding-top: 100px;   /* กันชน navbar ให้พอดีบน tablet */
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  
 }
