@@ -69,6 +69,7 @@ function getSelectedRadioValue(name) {
 // Function to fetch and display recent feedback
 async function loadRecentFeedback() {
     const feedbackList = document.getElementById('feedback-list');
+    if (feedbackList) feedbackList.classList.add('row');
     
     if (!feedbackList) {
         return;
@@ -106,9 +107,12 @@ async function loadRecentFeedback() {
 
 // Function to create a feedback card element
 function createFeedbackCard(feedback, index) {
+    // Create column wrapper
+    const col = document.createElement('div');
+    col.className = 'col-md-6 col-lg-4 mb-4'; // Grid classes
+
     const card = document.createElement('div');
-    card.className = 'feedback-card mb-3 p-3 border rounded';
-    card.style.backgroundColor = 'var(--bg-lighter-pink)';
+    card.className = 'feedback-card p-3 rounded h-100'; // h-100 for equal height
     
     const favoriteBoothText = feedback.favoriteBooth === '0' ? 'None' : `Booth ${feedback.favoriteBooth}`;
     const date = new Date(feedback.timestamp);
@@ -122,13 +126,12 @@ function createFeedbackCard(feedback, index) {
     
     // HTML card <<<
     card.innerHTML = `
-    <div class="col-md-6">
         <div class="d-flex justify-content-between align-items-start mb-2">
             <h6 class="mb-0">Feedback #${index}</h6>
             <small class="text-muted">${escapeHtml(formattedDate)}</small>
         </div>
         <div class="row mb-2">
-            <div class="ms-3">
+            <div class="col-12">
                 <p class="mb-1"><strong>Gender:</strong> ${escapeHtml(feedback.gender)}</p>
                 <p class="mb-1"><strong>Age:</strong> ${escapeHtml(feedback.age)}</p>
                 <p class="mb-1"><strong>Favorite Booth:</strong> ${escapeHtml(favoriteBoothText)}</p>
@@ -151,7 +154,8 @@ function createFeedbackCard(feedback, index) {
         }
     `;
     
-    return card;
+    col.appendChild(card);
+    return col;
 }
 
 // Helper function to escape HTML to prevent XSS
