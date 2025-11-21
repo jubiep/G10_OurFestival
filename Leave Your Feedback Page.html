@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="./CSSFiles/Basestyle.css">
@@ -17,33 +19,31 @@
 
 <body>
     <!-- Navbar -->
-<nav class="navbar-leftstyle">
-  <div class="navbar-logo">
-    <a href="Homepage.html"><img src="MediaFiles/home.png" alt="Logo 1"></a>
-    <a href="Registration Page.html"><img src="MediaFiles/user.png" alt="Logo 2"></a>
-  </div>
-  <div class="navbar-toggle" id="navbarToggle">
-    ☰
-  </div>
-     <ul class="navbar-menu" id="navbarMenu">
-      <li><a href="Booth1 Page.html">Beverages</a></li>
-      <li><a href="Booth2 Page.html">Desserts</a></li>
-      <li><a href="Booth3 Page.html">Photobooth</a></li>
-      <li><a href="Booth4 Page.html">Gadgets</a></li>
-    </ul>
-</nav>
-<!-- จบ Navbar -->
+    <nav class="navbar-leftstyle">
+        <div class="navbar-logo">
+            <a href="Homepage.html"><img src="MediaFiles/home.png" alt="Logo 1"></a>
+            <a href="Registration Page.html"><img src="MediaFiles/user.png" alt="Logo 2"></a>
+        </div>
+        <div class="navbar-toggle" id="navbarToggle">
+            ☰
+        </div>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="Booth1 Page.html">Beverages</a></li>
+            <li><a href="Booth2 Page.html">Desserts</a></li>
+            <li><a href="Booth3 Page.html">Photobooth</a></li>
+            <li><a href="Booth4 Page.html">Gadgets</a></li>
+        </ul>
+    </nav>
+    <!-- จบ Navbar -->
     <div class="container my-4 feedback-field">
         <div class="row">
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6">
                 <!-- Question & Consent for Personal Data (PDPA) -->
-                <h2>Have a question?</h2>
-                <p>If you have any questions or feedback about the festival, please let us know by filling out the form.</p>
-                <h4>Consent for Personal Data (PDPA)</h4>
-                <p>
-                    By submitting this form, you agree to allow us to collect and use your personal information (such as gender, age, and feedback) solely for improving the festival experience. Your data will be kept confidential and not shared with third parties.
+                <h2>Do you satified?</h2>
+                <p>If you have any questions or feedback about the festival, please let us know by filling out the form.
                 </p>
             </div>
+
             <div class="col-md-6">
 
                 <!-- Feedback Form -->
@@ -61,7 +61,8 @@
 
                     <div class="mb-3">
                         <label for="feedback-age" class="form-label">Age</label>
-                        <input type="text" name="feedback-age" id="feedback-age" pattern="\d{1,3}" title="please type an integer" class="form-control">
+                        <input type="text" name="feedback-age" id="feedback-age" pattern="\d{1,3}"
+                            title="please type an integer" class="form-control">
                     </div>
 
                     <!-- Booth Ratings -->
@@ -72,23 +73,28 @@
                             <label for="feedback-booth-1-rating" class="form-label">Booth 1</label>
                             <div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-1" value="1" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating"
+                                        id="booth1-rating-1" value="1" required>
                                     <label class="form-check-label" for="booth1-rating-1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-2" value="2" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating"
+                                        id="booth1-rating-2" value="2" required>
                                     <label class="form-check-label" for="booth1-rating-2">2</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-3" value="3" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating"
+                                        id="booth1-rating-3" value="3" required>
                                     <label class="form-check-label" for="booth1-rating-3">3</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-4" value="4" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating"
+                                        id="booth1-rating-4" value="4" required>
                                     <label class="form-check-label" for="booth1-rating-4">4</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating" id="booth1-rating-5" value="5" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-1-rating"
+                                        id="booth1-rating-5" value="5" required>
                                     <label class="form-check-label" for="booth1-rating-5">5</label>
                                 </div>
                             </div>
@@ -98,23 +104,28 @@
                             <label for="feedback-booth-2-rating" class="form-label">Booth 2</label>
                             <div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-1" value="1" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating"
+                                        id="booth2-rating-1" value="1" required>
                                     <label class="form-check-label" for="booth2-rating-1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-2" value="2" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating"
+                                        id="booth2-rating-2" value="2" required>
                                     <label class="form-check-label" for="booth2-rating-2">2</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-3" value="3" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating"
+                                        id="booth2-rating-3" value="3" required>
                                     <label class="form-check-label" for="booth2-rating-3">3</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-4" value="4" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating"
+                                        id="booth2-rating-4" value="4" required>
                                     <label class="form-check-label" for="booth2-rating-4">4</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating" id="booth2-rating-5" value="5" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-2-rating"
+                                        id="booth2-rating-5" value="5" required>
                                     <label class="form-check-label" for="booth2-rating-5">5</label>
                                 </div>
                             </div>
@@ -124,23 +135,28 @@
                             <label for="feedback-booth-3-rating" class="form-label">Booth 3</label>
                             <div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-1" value="1" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating"
+                                        id="booth3-rating-1" value="1" required>
                                     <label class="form-check-label" for="booth3-rating-1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-2" value="2" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating"
+                                        id="booth3-rating-2" value="2" required>
                                     <label class="form-check-label" for="booth3-rating-2">2</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-3" value="3" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating"
+                                        id="booth3-rating-3" value="3" required>
                                     <label class="form-check-label" for="booth3-rating-3">3</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-4" value="4" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating"
+                                        id="booth3-rating-4" value="4" required>
                                     <label class="form-check-label" for="booth3-rating-4">4</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating" id="booth3-rating-5" value="5" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-3-rating"
+                                        id="booth3-rating-5" value="5" required>
                                     <label class="form-check-label" for="booth3-rating-5">5</label>
                                 </div>
                             </div>
@@ -150,23 +166,28 @@
                             <label for="feedback-booth-4-rating" class="form-label">Booth 4</label>
                             <div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-1" value="1" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating"
+                                        id="booth4-rating-1" value="1" required>
                                     <label class="form-check-label" for="booth4-rating-1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-2" value="2" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating"
+                                        id="booth4-rating-2" value="2" required>
                                     <label class="form-check-label" for="booth4-rating-2">2</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-3" value="3" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating"
+                                        id="booth4-rating-3" value="3" required>
                                     <label class="form-check-label" for="booth4-rating-3">3</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-4" value="4" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating"
+                                        id="booth4-rating-4" value="4" required>
                                     <label class="form-check-label" for="booth4-rating-4">4</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating" id="booth4-rating-5" value="5" required>
+                                    <input class="form-check-input" type="radio" name="feedback-booth-4-rating"
+                                        id="booth4-rating-5" value="5" required>
                                     <label class="form-check-label" for="booth4-rating-5">5</label>
                                 </div>
                             </div>
@@ -188,14 +209,26 @@
                     <!-- Additional Feedback -->
                     <div class="mb-3">
                         <label for="feedback-additional-comment" class="form-label">Additional Feedback</label>
-                        <textarea name="comment" id="feedback-additional-comment" class="form-control" placeholder="Comment..." rows="3"></textarea>
+                        <textarea name="comment" id="feedback-additional-comment" class="form-control"
+                            placeholder="Comment..." rows="3"></textarea>
                     </div>
 
                     <!-- PDPA Consent -->
+
+                    <div class="col-md-12">
+                        <h4>Consent for Personal Data (PDPA)</h4>
+                        <p>
+                            By submitting this form, you agree to allow us to collect and use your personal information
+                            (such as gender, age, and feedback) solely for improving the festival experience. Your data
+                            will be kept confidential and not shared with third parties.
+                        </p>
+                    </div>
+
                     <div class="mb-3 form-check">
                         <input type="checkbox" name="pdpa_consent" id="pdpa-consent" class="form-check-input" required>
                         <label class="form-check-label" for="pdpa-consent">
-                            I have read and consent to the collection and use of my personal data in accordance with the PDPA.
+                            I have read and consent to the collection and use of my personal data in accordance with the
+                            PDPA.
                         </label>
                     </div>
 
@@ -215,29 +248,29 @@
 
     <!-- Footer -->
     <footer class="footer">
-  <div class="footer-container">
-    <h3>Contact us</h3>
+        <div class="footer-container">
+            <h3>Contact us</h3>
 
-    <div class="footer-content">
-      <!-- Left side: Contact Info -->
-      <div class="contact-info">
-        <p><i class="fa-solid fa-phone"></i> 069-999-999</p>
-        <p><i class="fa-solid fa-envelope"></i> CAFEFAIR_official@gmail.com</p>
-        <p><i class="fa-solid fa-calendar-days"></i> Monday - Friday <br> 09.00 - 17.00</p>
-      </div>
+            <div class="footer-content">
+                <!-- Left side: Contact Info -->
+                <div class="contact-info">
+                    <p><i class="fa-solid fa-phone"></i> 069-999-999</p>
+                    <p><i class="fa-solid fa-envelope"></i> CAFEFAIR_official@gmail.com</p>
+                    <p><i class="fa-solid fa-calendar-days"></i> Monday - Friday <br> 09.00 - 17.00</p>
+                </div>
 
-      <!-- Right side: Social Media -->
-      <div class="social-info">
-        <p><i class="fa-brands fa-instagram"></i> CAFE FAIR</p>
-        <p><i class="fa-brands fa-facebook"></i> CAFE FAIR</p>
-        <p><i class="fa-brands fa-x-twitter"></i> @CAFE_FAIR</p>
-        <p><i class="fa-brands fa-line"></i> @CAFEFAIR_official</p>
-      </div>
-    </div>
-  </div>
-</footer>
+                <!-- Right side: Social Media -->
+                <div class="social-info">
+                    <p><i class="fa-brands fa-instagram"></i> CAFE FAIR</p>
+                    <p><i class="fa-brands fa-facebook"></i> CAFE FAIR</p>
+                    <p><i class="fa-brands fa-x-twitter"></i> @CAFE_FAIR</p>
+                    <p><i class="fa-brands fa-line"></i> @CAFEFAIR_official</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="./JSFiles/feedback.js"></script>
-   <script src="JSFiles/basestyle.js"></script>
+    <script src="JSFiles/basestyle.js"></script>
 </body>
 
 </html>
