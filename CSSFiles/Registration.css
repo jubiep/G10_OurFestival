@@ -47,6 +47,9 @@ body {
     color: #7a6046;
     margin-bottom: 1.5rem;
   }
+  .form-label{
+    font-family: "Caprasimo", sans-serif;
+  }
   .form-control, .form-select {
     border-radius: 10px;
     border-color: #c9b8a7;
