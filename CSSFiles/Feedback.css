@@ -84,6 +84,11 @@ body {
   margin-right: 15px;
 }
 
+input[type="radio"].form-check-input {
+  width: 2em;
+  height: 1em;
+}
+
 /* Buttons styling */
 #feedback-form .btn-primary {
   background-color: var(--bg-light-pinker);
@@ -122,6 +127,7 @@ body {
 
 @media (max-width: 768px) {
   .feedback-field .col-md-6 {
+    margin-left: 20px;
     padding: 20px;
   }
 
