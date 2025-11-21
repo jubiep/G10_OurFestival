@@ -109,10 +109,10 @@ async function loadRecentFeedback() {
 function createFeedbackCard(feedback, index) {
     // Create column wrapper
     const col = document.createElement('div');
-    col.className = 'col-md-6 col-lg-4 mb-4'; // Grid classes
+    col.className = 'col-md-4 col-lg-4 mb-2'; // Grid classes
 
     const card = document.createElement('div');
-    card.className = 'feedback-card p-3 rounded h-100'; // h-100 for equal height
+    card.className = 'feedback-card p-3 rounded h-100';
     
     const favoriteBoothText = feedback.favoriteBooth === '0' ? 'None' : `Booth ${feedback.favoriteBooth}`;
     const date = new Date(feedback.timestamp);

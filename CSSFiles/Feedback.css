@@ -54,7 +54,7 @@ body {
 .feedback-field h2,
 .feedback-field h4,
 .feedback-field p {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .feedback-field .row {
@@ -62,12 +62,14 @@ body {
   gap: 30px;
 }
 
-.feedback-field .col-md-6 {
+.feedback-field .col-md-6, .col-lg-4, .col-md-4 {
   background-color: var(--fbf-bgc);
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
+
+
 
 #feedback-form .form-label {
   font-weight: 600;
@@ -145,7 +147,7 @@ input[type="checkbox"].form-check-input:focus {
 }
 
 @media (max-width: 768px) {
-  .feedback-field .col-md-6 {
+  .feedback-field .col-md-6, .col-md-4, .col-lg-4 {
     margin-left: 20px;
     padding: 20px;
   }

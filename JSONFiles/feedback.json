@@ -24,5 +24,18 @@
         },
         "favoriteBooth": "4",
         "comment": "I love this festival!"
+    },
+    {
+        "timestamp": "2025-11-21T12:33:40.528Z",
+        "gender": "lgbtqiaplus",
+        "age": "18",
+        "boothRatings": {
+            "booth1": "4",
+            "booth2": "2",
+            "booth3": "1",
+            "booth4": "3"
+        },
+        "favoriteBooth": "3",
+        "comment": "Satisfied!"
     }
 ]
