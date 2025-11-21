@@ -51,7 +51,7 @@ foreach ($data as $entry) {
             border-radius: 15px;
         }
         .header-box {
-            background: #6f42c1;
+            background: #fa6aeeff;
             color: white;
             padding: 25px;
             border-radius: 15px;
@@ -104,7 +104,7 @@ foreach ($data as $entry) {
                     <th>อีเมล</th>
                     <th>โทร</th>
                     <th>ประเภท</th>
-                    <th>ความสนใจ</th>
+                    <th>ความสนใจ </th>
                 </tr>
                 </thead>
                 <tbody>
