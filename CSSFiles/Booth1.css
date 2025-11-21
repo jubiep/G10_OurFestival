@@ -246,3 +246,13 @@
     align-items: center;
     justify-content: center;
 }
+
+/* --------------- Mobile Fix --------------- */
+@media (max-width: 576px) {
+  .container.menu {
+    padding-top: 80px;   /* กันไม่ให้ชน navbar */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+}
