@@ -284,4 +284,8 @@
     .menu-img {
     padding-bottom: 40px;
   }
+
+    .row-w3 {
+    margin: 60px 0;  /* ลดจาก 100px ที่ใช้ใน desktop */
+  }
 }
