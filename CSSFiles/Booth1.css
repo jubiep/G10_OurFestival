@@ -288,4 +288,8 @@
     .row-w3 {
     margin: 60px 0;  /* ลดจาก 100px ที่ใช้ใน desktop */
   }
+
+    .column-w3 img {
+    max-width: 75px;
+  }
 }
