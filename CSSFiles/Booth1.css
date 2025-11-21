@@ -254,8 +254,16 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+
     .row-w3 {
     margin: 40px 0; /* ตัด margin ให้พอดี ไม่หลุดขอบ */
   }
-  
+
+  .menu-info {
+    padding: 10px 0;
+  }
+
+  .menu-img {
+    padding-bottom: 20px;
+  }
 }
