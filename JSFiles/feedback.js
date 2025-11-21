@@ -109,7 +109,7 @@ async function loadRecentFeedback() {
 function createFeedbackCard(feedback, index) {
     // Create column wrapper
     const col = document.createElement('div');
-    col.className = 'col-md-4 col-lg-4 mb-2'; // Grid classes
+    col.className = 'primary-field col-md-6 col-lg-4 mb-2'; // Grid classes
 
     const card = document.createElement('div');
     card.className = 'feedback-card p-3 rounded h-100';
