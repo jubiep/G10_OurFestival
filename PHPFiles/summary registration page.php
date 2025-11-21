@@ -104,7 +104,7 @@ foreach ($data as $entry) {
                     <th>อีเมล</th>
                     <th>โทร</th>
                     <th>ประเภท</th>
-                    <th>ความสนใจ</th>
+                    <th>ความสนใจ </th>
                 </tr>
                 </thead>
                 <tbody>
