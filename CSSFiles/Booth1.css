@@ -254,5 +254,8 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+    .row-w3 {
+    margin: 40px 0; /* ตัด margin ให้พอดี ไม่หลุดขอบ */
+  }
   
 }
