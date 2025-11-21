@@ -127,7 +127,7 @@ function createFeedbackCard(feedback, index) {
     // HTML card <<<
     card.innerHTML = `
         <div class="d-flex justify-content-between align-items-start mb-2">
-            <h6 class="mb-0">Feedback #${index}</h6>
+            <h4 class="mb-0">#${index}</h4>
             <small class="text-muted">${escapeHtml(formattedDate)}</small>
         </div>
         <div class="row mb-2">
@@ -138,7 +138,7 @@ function createFeedbackCard(feedback, index) {
             </div>
         </div>
         <div class="mb-2">
-            <strong>Booth Ratings:</strong>
+            <p><strong>Booth Ratings:</strong></p>
             <div class="ms-3">
                 <p class="mb-0">Booth 1: ${escapeHtml(String(feedback.booth1Rating))}/5</p>
                 <p class="mb-0">Booth 2: ${escapeHtml(String(feedback.booth2Rating))}/5</p>
@@ -148,7 +148,7 @@ function createFeedbackCard(feedback, index) {
         </div>
         ${feedback.comment && feedback.comment !== 'No comment' ? 
             `<div class="mt-2">
-                <strong>Comment:</strong>
+                <p><strong>Comment:</strong></p>
                 <p class="mb-0 ms-2">${escapeHtml(feedback.comment)}</p>
             </div>` : ''
         }
