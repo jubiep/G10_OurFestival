@@ -11,5 +11,18 @@
         },
         "favoriteBooth": "1",
         "comment": "Good Store!"
+    },
+    {
+        "timestamp": "2025-11-21T11:55:39.775Z",
+        "gender": "male",
+        "age": "18",
+        "boothRatings": {
+            "booth1": "5",
+            "booth2": "2",
+            "booth3": "4",
+            "booth4": "3"
+        },
+        "favoriteBooth": "4",
+        "comment": "I love this festival!"
     }
 ]
