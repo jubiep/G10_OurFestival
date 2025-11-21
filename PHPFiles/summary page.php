@@ -1,5 +1,5 @@
 <?php
-// Path to JSON file
+
 $feedbackFile = __DIR__ . '/JSONFiles/feedback.json';
 
 if (!file_exists($feedbackFile)) {
@@ -10,7 +10,6 @@ if (!file_exists($feedbackFile)) {
 $json = file_get_contents($feedbackFile);
 $data = json_decode($json, true);
 
-// Prepare summary
 $totalFeedback = count($data);
 
 $genderCount = [
@@ -34,20 +33,17 @@ $comments = [];
 
 foreach ($data as $entry) {
 
-    // Gender
     if (!empty($entry['gender']) && isset($genderCount[$entry['gender']])) {
         $genderCount[$entry['gender']]++;
     } else {
         $genderCount['not_say']++;
     }
 
-    // Age
     if (!empty($entry['age']) && is_numeric($entry['age'])) {
         $ageSum += intval($entry['age']);
         $ageCount++;
     }
 
-    // Ratings
     if (isset($entry['boothRatings'])) {
         foreach ($entry['boothRatings'] as $booth => $rate) {
             if ($rate !== "" && $rate !== null) {
@@ -56,7 +52,7 @@ foreach ($data as $entry) {
         }
     }
 
-    // Comments
+
     if (!empty($entry['comment'])) {
         $comments[] = $entry['comment'];
     }
@@ -75,7 +71,6 @@ function avgRating($arr) {
 <meta charset="UTF-8">
 <title>Feedback Summary</title>
 
-<!-- Bootstrap 5 CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
@@ -90,7 +85,6 @@ function avgRating($arr) {
 
     <h1 class="text-center mb-4 fw-bold">📊 Feedback Summary</h1>
 
-    <!-- Summary Cards -->
     <div class="row g-4 mb-4">
 
         <div class="col-md-4">
@@ -116,7 +110,6 @@ function avgRating($arr) {
 
     </div>
 
-    <!-- Gender -->
     <div class="card shadow-sm mb-4 p-3">
         <h4>Gender Distribution</h4>
         <ul class="list-group">
@@ -127,7 +120,6 @@ function avgRating($arr) {
         </ul>
     </div>
 
-    <!-- Booth Ratings -->
     <div class="card shadow-sm mb-4 p-3">
         <h4>Booth Rating Averages</h4>
         <table class="table table-bordered mt-2">
@@ -146,7 +138,6 @@ function avgRating($arr) {
         </table>
     </div>
 
-    <!-- Comments -->
     <div class="card shadow-sm p-3 mb-5">
         <h4>Comments</h4>
         <?php if ($comments): ?>
