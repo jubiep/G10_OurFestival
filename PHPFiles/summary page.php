@@ -1,6 +1,6 @@
 <?php
 
-$feedbackFile = __DIR__ . '/JSONFiles/feedback.json';
+$feedbackFile = __DIR__ . '/../JSONFiles/feedback.json';
 
 if (!file_exists($feedbackFile)) {
     echo "<p>No feedback data available.</p>";
