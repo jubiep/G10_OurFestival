@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Quicksand:wght@300..700&display=swap");
 
+/* Variables */
 :root {
   --bg-light-pinkest: #ff9eb6;
   --bg-light-pinker: #ffc3d2;
@@ -13,6 +14,42 @@
   --font-title: #badd7f;
   --font-p: #ca7190;
   --old-font-p: #dc9aad;
+}
+
+/* Global / Base Styles */
+/* I think boxshadow is good for nav */
+.navbar-leftstyle {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-lighter-pink);
+}
+
+.text-muted {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Layout */
+.container {
+  padding-top: 10vh;
+  min-height: 75vh;
+}
+
+/* Feedback Field Component */
+.feedback-field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.feedback-field .row {
+  justify-content: center;
+  gap: 30px;
 }
 
 .feedback-field :is(label) {
@@ -32,65 +69,21 @@
   color: var(--font-p);
 }
 
-.text-muted {
-  font-family: "Quicksand", sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg-lighter-pink);
-}
-
-.container {
-  padding-top: 10vh;
-}
-
-.feedback-field {
-  display: flex;
-  flex-direction: column;
-  margin-top: 120px;
-  margin-bottom: 50px;
-  position: relative;
-}
-
 .feedback-field h2,
 .feedback-field h4,
 .feedback-field p {
   margin-bottom: 5px;
 }
 
-.feedback-field .row {
-  justify-content: center;
-  gap: 30px;
-}
-
-.feedback-field > .btn-primary {
-  position: relative;
-  align-self: center;
-}
-
-.feedback-field > .btn-primary, .mb-3 > .btn-primary{
-  background-color: var(--bg-lighter-pink);
-  border-color: var(--bg-lighter-pink);
-  color: var(--font-p);
-  transition: 0.4s all ease;
-}
-
-.feedback-field > .btn-primary:hover, .mb-3 > .btn-primary:hover {
-  scale: 1.1;
-  background-color: var(--bg-light-pinkest);
-  border-color: var(--bg-light-pinkest);
-  color: #fff;
-}
-
-.feedback-field .col-md-6, .col-lg-4, .col-md-4 {
+/* Primary Field */
+.primary-field {
   background-color: var(--fbf-bgc);
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Forms */
 #feedback-form .form-label {
   font-weight: 600;
 }
@@ -112,7 +105,7 @@ body {
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
 
-/* Radio buttons alignment */
+/* Radio Buttons */
 .form-check-inline {
   margin-right: 15px;
 }
@@ -120,9 +113,30 @@ body {
 input[type="radio"].form-check-input {
   width: 2em;
   height: 1em;
+  border-color: var(--bg-light-pinkest);
 }
 
-/* Buttons styling */
+input[type="radio"].form-check-input:checked {
+  background-color: var(--bg-light-pinkest);
+}
+
+/* Checkboxes */
+input[type="checkbox"].form-check-input {
+  background-color: var(--bg-light-pinkest);
+  border-color: var(--bg-light-pinker);
+  transition: 0.4 all ease;
+}
+
+input[type="checkbox"].form-check-input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+input[type="checkbox"].form-check-input:checked {
+  background-color: var(--font-sub-sub-title);
+}
+
+/* Buttons */
 #feedback-form .btn-primary {
   background-color: var(--bg-light-pinker);
   border-color: var(--bg-light-pinker);
@@ -134,8 +148,6 @@ input[type="radio"].form-check-input {
   border-color: var(--bg-light-pinkest);
 }
 
-
-/* Clear Button */
 #feedback-form .btn-secondary {
   color: var(--old-font-p);
   background-color: #fff;
@@ -144,38 +156,53 @@ input[type="radio"].form-check-input {
 }
 
 #feedback-form .btn-secondary:hover {
-  background-color: var(--bg-light-pink);
-  border-color: var(--bg-light-pink);
+  background-color: var(--font-sub-sub-title);
+  border-color: var(--font-sub-sub-title);
+  transition: 0.4s all ease;
 }
 
-/* Both Button */
-#feedback-form .btn-primary:active, .btn-secondary:active {
-  scale: 0.9;
+/* Shared Button States */
+#feedback-form .btn-primary:hover,
+#feedback-form .btn-secondary:hover {
+  scale: 1.04;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  color: #fff;
 }
 
-/* Check box styling */
-input[type="checkbox"].form-check-input {
+#feedback-form .btn-primary:active,
+#feedback-form .btn-secondary:active {
+  scale: 0.96;
+}
+
+/* Link Field Buttons */
+.a-field > .btn-primary,
+.a-field > .btn-secondary {
+  background: none;
+  border: none;
+  color: var(--font-p);
+  transition: 0.4s all ease;
+}
+
+.a-field > .btn-primary:hover,
+.a-field > .btn-secondary:hover {
+  color: #fff;
   background-color: var(--bg-light-pinkest);
-  border-color: var(--bg-light-pinker);
+  scale: 1.04;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-input[type="checkbox"].form-check-input:focus {
-  border-color: #4caf50;
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
-}
-
-/* Recent field */
+/* Specific Sections */
 .recent-field > h2 {
   align-self: center;
 }
 
-/* Clear & Submit spacing */
 #feedback-form .d-flex.justify-content-between {
   margin-top: 15px;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-  .feedback-field .col-md-6, .col-md-4, .col-lg-4 {
+  .feedback-field .primary-field {
     margin-left: 20px;
     padding: 20px;
   }
