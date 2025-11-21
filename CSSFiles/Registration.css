@@ -36,14 +36,19 @@ body {
     padding: 3rem;
   }
   h1.title {
+    font-family: Quicksand;
     font-weight: 800;
     font-size: 2.5rem;
     color: #5b4332;
   }
   h2.subtitle {
+    font-family: Quicksand;
     font-weight: 600;
     color: #7a6046;
     margin-bottom: 1.5rem;
+  }
+  .form-label{
+    font-family: "Caprasimo", sans-serif;
   }
   .form-control, .form-select {
     border-radius: 10px;
