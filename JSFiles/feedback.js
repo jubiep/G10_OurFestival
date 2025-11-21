@@ -114,7 +114,16 @@ function createFeedbackCard(feedback, index) {
     const card = document.createElement('div');
     card.className = 'feedback-card p-3 rounded h-100';
     
-    const favoriteBoothText = feedback.favoriteBooth === '0' ? 'None' : `Booth ${feedback.favoriteBooth}`;
+    const boothNames = {
+        '0': 'None',
+        '1': 'Beverages',
+        '2': 'Desserts',
+        '3': 'Photobooth',
+        '4': 'Gadgets'
+    };
+
+    // Get name of booth (for favorite) in order.
+    const favoriteBoothText = boothNames[feedback.favoriteBooth] || 'None';
     const date = new Date(feedback.timestamp);
     const formattedDate = date.toLocaleString('en-US', {
         year: 'numeric',
@@ -140,10 +149,10 @@ function createFeedbackCard(feedback, index) {
         <div class="mb-2">
             <p><strong>Booth Ratings:</strong></p>
             <div class="ms-3">
-                <p class="mb-0">Booth 1: ${escapeHtml(String(feedback.booth1Rating))}/5</p>
-                <p class="mb-0">Booth 2: ${escapeHtml(String(feedback.booth2Rating))}/5</p>
-                <p class="mb-0">Booth 3: ${escapeHtml(String(feedback.booth3Rating))}/5</p>
-                <p class="mb-0">Booth 4: ${escapeHtml(String(feedback.booth4Rating))}/5</p>
+                <p class="mb-0">Beverages: ${escapeHtml(String(feedback.booth1Rating))}/5</p>
+                <p class="mb-0">Desserts: ${escapeHtml(String(feedback.booth2Rating))}/5</p>
+                <p class="mb-0">Photobooth: ${escapeHtml(String(feedback.booth3Rating))}/5</p>
+                <p class="mb-0">Gadgets: ${escapeHtml(String(feedback.booth4Rating))}/5</p>
             </div>
         </div>
         ${feedback.comment && feedback.comment !== 'No comment' ? 
