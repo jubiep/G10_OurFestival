@@ -44,7 +44,7 @@ async function handleFormSubmit(event) {
             // Reset form normally
             alert('Your submission has been saved.');
             feedbackForm.reset();
-            loadRecentFeedback();
+            // loadRecentFeedback();
         } else if (result.error){
             alert('Error saving feedback: ' + result.error);
         }

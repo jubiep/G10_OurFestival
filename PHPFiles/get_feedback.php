@@ -35,8 +35,8 @@ if (is_array($dataArray)) {
             unset($data['boothRatings']);
         }
 
-        $data['filename'] = basename($file);
-        $data['index'] = $index;
+        // $data['filename'] = basename($file);
+        // $data['index'] = $index;
 
         $feedbackList[] = $data;
     }
