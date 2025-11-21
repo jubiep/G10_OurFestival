@@ -14,3 +14,104 @@
 label {
   font-family: 'Quicksand', sans-serif;
 }
+
+.container {
+  padding-top: 10vh;
+}
+
+.feedback-field {
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+
+.feedback-field h2,
+.feedback-field h4,
+.feedback-field p {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.feedback-field .row {
+    justify-content: center;
+    gap: 30px;
+}
+
+.feedback-field .col-md-6 {
+    background-color: #fff3f6;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#feedback-form .form-label {
+    font-weight: 600;
+}
+
+#feedback-form .form-control,
+#feedback-form .form-select,
+#feedback-form textarea {
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    transition: 0.2s ease;
+}
+
+#feedback-form .form-control:focus,
+#feedback-form .form-select:focus,
+#feedback-form textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Radio buttons alignment */
+.form-check-inline {
+    margin-right: 15px;
+}
+
+/* Buttons styling */
+#feedback-form .btn-primary {
+    background-color: #4CAF50; 
+    border-color: #4CAF50;
+}
+
+#feedback-form .btn-primary:hover {
+    background-color: #3e8e41;
+    border-color: #3e8e41;
+}
+
+#feedback-form .btn-secondary {
+    background-color: #ffc3d2;
+    border-color: #ffc3d2;
+    color: #000;
+}
+
+#feedback-form .btn-secondary:hover {
+    background-color: #e5a0be;
+    border-color: #e5a0be;
+    color: #000;
+}
+
+/* Clear & Submit spacing */
+#feedback-form .d-flex.justify-content-between {
+    margin-top: 15px;
+}
+
+/* Recent Feedback box */
+#feedback-list {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff3f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+    .feedback-field .col-md-6 {
+        padding: 20px;
+    }
+
+    #feedback-form .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
