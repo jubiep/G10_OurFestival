@@ -1,20 +1,18 @@
 <?php
-header('Content-Type: text/plain');
-
 // Path to JSON file
 $feedbackFile = __DIR__ . '/JSONFiles/feedback.json';
 
-// Read file
 if (!file_exists($feedbackFile)) {
-    echo "No feedback data available.";
+    echo "<p>No feedback data available.</p>";
     exit;
 }
 
 $json = file_get_contents($feedbackFile);
 $data = json_decode($json, true);
 
-// Prepare summary variables
+// Prepare summary
 $totalFeedback = count($data);
+
 $genderCount = [
     'female' => 0,
     'male' => 0,
@@ -34,29 +32,25 @@ $boothRatings = [
 
 $comments = [];
 
-
-// Process each feedback entry
 foreach ($data as $entry) {
 
-    // Count gender
-    if (isset($entry['gender']) && $entry['gender'] !== '') {
-        if (isset($genderCount[$entry['gender']])) {
-            $genderCount[$entry['gender']]++;
-        }
+    // Gender
+    if (!empty($entry['gender']) && isset($genderCount[$entry['gender']])) {
+        $genderCount[$entry['gender']]++;
     } else {
         $genderCount['not_say']++;
     }
 
     // Age
-    if (isset($entry['age']) && is_numeric($entry['age'])) {
+    if (!empty($entry['age']) && is_numeric($entry['age'])) {
         $ageSum += intval($entry['age']);
         $ageCount++;
     }
 
-    // Booth ratings
+    // Ratings
     if (isset($entry['boothRatings'])) {
         foreach ($entry['boothRatings'] as $booth => $rate) {
-            if ($rate !== null && $rate !== "") {
+            if ($rate !== "" && $rate !== null) {
                 $boothRatings[$booth][] = intval($rate);
             }
         }
@@ -68,66 +62,104 @@ foreach ($data as $entry) {
     }
 }
 
-
-// Summary calculations
 $averageAge = $ageCount > 0 ? round($ageSum / $ageCount, 1) : "-";
 
 function avgRating($arr) {
-    return count($arr) > 0 ? round(array_sum($arr) / count($arr), 2) : "-";
+    return count($arr) ? round(array_sum($arr) / count($arr), 2) : "-";
 }
-
-
-// OUTPUT SUMMARY
-echo "===== FEEDBACK SUMMARY =====\n\n";
-
-echo "Total feedback entries: $totalFeedback\n\n";
-
-echo "----- Gender Count -----\n";
-echo "Female: " . $genderCount['female'] . "\n";
-echo "Male: " . $genderCount['male'] . "\n";
-echo "LGBTQIA+: " . $genderCount['lgbtqiaplus'] . "\n";
-echo "Not prefer to say: " . $genderCount['not_say'] . "\n\n";
-
-echo "----- Age Summary -----\n";
-echo "Average Age: " . $averageAge . "\n\n";
-
-echo "----- Booth Rating Averages -----\n";
-echo "Booth 1 Average: " . avgRating($boothRatings['booth1']) . "\n";
-echo "Booth 2 Average: " . avgRating($boothRatings['booth2']) . "\n";
-echo "Booth 3 Average: " . avgRating($boothRatings['booth3']) . "\n";
-echo "Booth 4 Average: " . avgRating($boothRatings['booth4']) . "\n\n";
-
-echo "----- Comments -----\n";
-if (count($comments) > 0) {
-    foreach ($comments as $i => $c) {
-        echo ($i+1) . ". " . $c . "\n";
-    }
-} else {
-    echo "No comments.\n";
-}
-
-echo "\n============================\n";
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>summary page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Instrument+Serif:ital@0;1&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./CSSFiles/Basestyle.css">
-    <link rel="stylesheet" href="./CSSFiles/BD.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Leave Your Feedback Page</title>
+<meta charset="UTF-8">
+<title>Feedback Summary</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body { background: #f1f3f9; }
+    .card { border-radius: 15px; }
+</style>
+
 </head>
 <body>
-    
+
+<div class="container my-5">
+
+    <h1 class="text-center mb-4 fw-bold">📊 Feedback Summary</h1>
+
+    <!-- Summary Cards -->
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm text-center">
+                <h5>Total Feedback</h5>
+                <h2 class="text-primary"><?= $totalFeedback ?></h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm text-center">
+                <h5>Average Age</h5>
+                <h2 class="text-success"><?= $averageAge ?></h2>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow-sm text-center">
+                <h5>Total Comments</h5>
+                <h2 class="text-warning"><?= count($comments) ?></h2>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Gender -->
+    <div class="card shadow-sm mb-4 p-3">
+        <h4>Gender Distribution</h4>
+        <ul class="list-group">
+            <li class="list-group-item">Female: <?= $genderCount['female'] ?></li>
+            <li class="list-group-item">Male: <?= $genderCount['male'] ?></li>
+            <li class="list-group-item">LGBTQIA+: <?= $genderCount['lgbtqiaplus'] ?></li>
+            <li class="list-group-item">Not prefer to say: <?= $genderCount['not_say'] ?></li>
+        </ul>
+    </div>
+
+    <!-- Booth Ratings -->
+    <div class="card shadow-sm mb-4 p-3">
+        <h4>Booth Rating Averages</h4>
+        <table class="table table-bordered mt-2">
+            <thead class="table-light">
+                <tr>
+                    <th>Booth</th>
+                    <th>Average Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Booth 1</td><td><?= avgRating($boothRatings['booth1']) ?></td></tr>
+                <tr><td>Booth 2</td><td><?= avgRating($boothRatings['booth2']) ?></td></tr>
+                <tr><td>Booth 3</td><td><?= avgRating($boothRatings['booth3']) ?></td></tr>
+                <tr><td>Booth 4</td><td><?= avgRating($boothRatings['booth4']) ?></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Comments -->
+    <div class="card shadow-sm p-3 mb-5">
+        <h4>Comments</h4>
+        <?php if ($comments): ?>
+            <ul class="list-group mt-2">
+                <?php foreach ($comments as $c): ?>
+                    <li class="list-group-item"><?= htmlspecialchars($c) ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <p>No comments.</p>
+        <?php endif; ?>
+    </div>
+</div>
+
 </body>
 </html>
