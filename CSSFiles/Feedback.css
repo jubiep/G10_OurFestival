@@ -11,11 +11,13 @@
   --font-sub-sub-title: #5aa851;
   --font-sub-title: #d86b90;
   --font-title: #badd7f;
-  --font-p: #dc9aad;
+  --font-p: #ca7190;
+  --old-font-p: #dc9aad;
 }
 
 label {
   font-family: "Quicksand", sans-serif;
+  color: var(--font-p);
 }
 
 h2 {
@@ -24,6 +26,10 @@ h2 {
 
 h4 {
   color: var(--font-sub-sub-title);
+}
+
+p {
+  color: var(--font-p);
 }
 
 body {
@@ -70,6 +76,7 @@ body {
   border: 1px solid #e5e5e5;
   background-color: #fff;
   transition: 0.2s ease;
+  color: var(--font-p);
 }
 
 #feedback-form .form-control:focus,
@@ -100,15 +107,16 @@ input[type="radio"].form-check-input {
   border-color: var(--bg-light-pinkest);
 }
 
+/* Clear Button */
 #feedback-form .btn-secondary {
-  color: #000;
-  background-color: #fcfcfc;
-  border-color: #ccc;
+  color: var(--old-font-p);
+  background-color: #fff;
+  border-color: #fff;
 }
 
 #feedback-form .btn-secondary:hover {
-  background-color: #cfcfcf;
-  border-color: #aaa;
+  background-color: var(--bg-light-pink);
+  border-color: var(--bg-light-pink);
 }
 
 /* Clear & Submit spacing */
