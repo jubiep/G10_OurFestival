@@ -21,6 +21,6 @@ document.getElementById("CafeForm").addEventListener("submit", function(e){
     })
     .then(res => res.json())
     .then(result => {
-        alert(using)
+        alert(result.message);
     });
 });
