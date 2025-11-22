@@ -13,21 +13,45 @@
     <title>Booth3 Page</title>
 </head>
 <body class="body">
-  <nav class="navbar-leftstyle">
-    <div class="navbar-logo">
-      <a href="Homepage.html"><img src="MediaFiles/home.png" alt="Logo 1" title="Homepage"></a>
-    <a href="Registration Page.html"><img src="MediaFiles/user.png" alt="Logo 2" title="Registration"></a>
-    <a href="Leave Your Feedback Page.html"><img src="MediaFiles/feedback.png" alt="Logo 3" title="Leave your feedback"></a>
-    </div>
+     <!-- Navbar -->
+<nav class="navbar-leftstyle">
+  <div class="navbar-logo">
 
-    <div class="navbar-toggle" id="navbarToggle"> ☰ </div>
-    <ul class="navbar-menu" id="navbarMenu">
+    <a href="Homepage.html">
+        <img src="MediaFiles/home.png" 
+             alt="Logo 1" 
+             title="Homepage" 
+             data-bs-toggle="tooltip">
+    </a>
+
+    <a href="Registration Page.html">
+        <img src="MediaFiles/user.png" 
+             alt="Logo 2" 
+             title="Registration" 
+             data-bs-toggle="tooltip">
+    </a>
+
+    <a href="Leave Your Feedback Page.html">
+        <img src="MediaFiles/feedback.png" 
+             alt="Logo 3" 
+             title="Leave your feedback"
+             data-bs-toggle="tooltip">
+    </a>
+
+  </div>
+
+  <div class="navbar-toggle" id="navbarToggle">
+    ☰
+  </div>
+
+  <ul class="navbar-menu" id="navbarMenu">
       <li><a href="Booth1 Page.html">Beverages</a></li>
       <li><a href="Booth2 Page.html">Desserts</a></li>
       <li><a href="Booth3 Page.html">Photobooth</a></li>
       <li><a href="Booth4 Page.html">Gadgets</a></li>
-    </ul>
-  </nav>
+  </ul>
+</nav>
+<!-- จบ Navbar -->
 
 <div class="photo-section">
 
@@ -123,6 +147,7 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="JSFiles/basestyle.js"></script>
 </body>
 </html>

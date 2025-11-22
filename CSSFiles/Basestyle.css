@@ -74,6 +74,9 @@ p {
   margin-left: auto;
   z-index: 101;
 }
+.tooltip {
+  z-index: 20000000 !important;
+}
 @media (max-width: 1200px) {
   .navbar-leftstyle {
     width: 100%;
