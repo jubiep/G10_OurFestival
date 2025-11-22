@@ -240,3 +240,35 @@ html, body {
   }
 }
 
+/* Dark Mode */
+
+#apperance-toggle {
+  background: none;
+  border: none;
+}
+
+body.dark-mode {
+  background-color: #333030;
+}
+
+body.dark-mode .navbar-leftstyle {
+  background-color: #3b252a;
+}
+
+body.dark-mode .footer {
+  background-color: #3b252a;
+}
+
+body.dark-mode .footer-container h3, body.dark-mode .footer-container p {
+  color: #fff;
+}
+
+body.dark-mode h2 {
+  color: #87a05c;
+}
+body.dark-mode h4 {
+  color: #439a3a;
+}
+body.dark-mode p {
+  color: #fff;
+}

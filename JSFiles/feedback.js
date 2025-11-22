@@ -137,7 +137,7 @@ function createFeedbackCard(feedback, index) {
     card.innerHTML = `
         <div class="d-flex justify-content-between align-items-start mb-2">
             <h4 class="mb-0">#${index}</h4>
-            <small class="text-muted">${escapeHtml(formattedDate)}</small>
+            <small class="text-muted"><p>${escapeHtml(formattedDate)}</p></small>
         </div>
         <div class="row mb-2">
             <div class="col-12">
