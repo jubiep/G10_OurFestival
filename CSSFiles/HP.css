@@ -598,6 +598,11 @@ display: none;
   min-width: 300px;
 }
 
+.name p {
+  display: flex;
+  justify-content: space-between;
+}
+
 .role {
   padding: 5%;
   background-color: rgba(255, 216, 225,0.8);
@@ -609,4 +614,102 @@ display: none;
   height: 300px;
   z-index: 10;
   margin-top: 5%;
+}
+
+/* Dark Mode */
+body.dark-mode .bg-name-role {
+  filter: invert(0.7);
+}
+
+body.dark-mode .main-content {
+  background-color: var(--bgc-dark);
+}
+
+body.dark-mode .bar-left,
+body.dark-mode .bar-right {
+  background-color: var(--bgc-dark-pink);
+}
+
+body.dark-mode .circle1 {
+  background-color: var(--bgc-dark-pink);
+}
+
+body.dark-mode .circle2 {
+  background-color: var(--darker-pink);
+}
+
+body.dark-mode .text-bg {
+  background-color: var(--bgc-dark-pink);
+}
+
+body.dark-mode .hero-text h1 {
+  color: var(--h2-crayola);
+}
+
+body.dark-mode .hero-text h3 {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .box h4 {
+  color: var(--h4-green-apple);
+}
+
+body.dark-mode .box p {
+  color: var(--p-dark-font);
+}
+
+/* body.dark-mode .cate-area,
+body.dark-mode .cate {
+   Adjust if needed, but maybe keep colorful backgrounds? 
+   For now, let's keep the colorful backgrounds as they seem to be specific to categories 
+} */
+
+body.dark-mode .cate h4 {
+  color: var(--p-dark-font); /* Ensure visibility on potentially dark backgrounds if changed, or just keep consistent */
+}
+
+body.dark-mode .cate p {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .search-container {
+  background-color: var(--bgc-dark-pink);
+  border-color: var(--dark-pink);
+}
+
+body.dark-mode .search-container input {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .search-container i {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .name-role p,
+body.dark-mode .name-role h4 {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .role {
+  background-color: var(--bgc-dark-pink);
+}
+
+body.dark-mode #cate-1 {
+  background-color: #a29d8f ;
+  box-shadow: 18px -4px 0px -1px rgba(207,164,96,0.54);
+}
+
+body.dark-mode #cate-2{
+    background-color: #b37f8c ;
+    box-shadow: 18px -4px 0px -1px rgba(233,125,160,0.54);
+}
+
+body.dark-mode #cate-3{
+    background-color: #947f84 ;
+    box-shadow: 18px -4px 0px -1px rgba(251,144,178,0.54);
+}
+
+body.dark-mode #cate-4{
+    background-color: #a87873;
+    box-shadow: 18px -4px 0px -1px rgba(199,40,21,0.54);
 }

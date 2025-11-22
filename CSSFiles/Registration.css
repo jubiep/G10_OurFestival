@@ -72,4 +72,59 @@ body {
     border-radius: 12px;
     padding: 2rem;
   }
+
+/* Dark Mode */
+body.dark-mode {
+  background: var(--bgc-dark);
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .sidebar {
+  background: var(--bgc-dark-pink);
+  border-right: 2px solid var(--darker-pink);
+}
+
+body.dark-mode .sidebar h2 {
+  color: var(--h2-crayola);
+}
+
+body.dark-mode .sidebar a {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .sidebar a:hover {
+  color: var(--h4-green-apple);
+}
+
+body.dark-mode h1.title {
+  color: var(--h2-crayola);
+}
+
+body.dark-mode h2.subtitle {
+  color: var(--h4-green-apple);
+}
+
+body.dark-mode .card {
+  background-color: var(--bgc-dark-pink);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .form-label {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: var(--darkest-pink);
+  border-color: var(--darker-pink);
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .btn-primary {
+  background-color: var(--darker-pink);
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: var(--dark-pink);
+}
   

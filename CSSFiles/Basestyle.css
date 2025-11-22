@@ -1,3 +1,24 @@
+:root {
+  --light-pinkest: #ff9eb6;
+  --light-pinker: #ffc3d2;
+  --light-pink: #ffeaef;
+  --lighter-pink: #fff3f6;
+  --darkest-pink: #43393b; 
+  --darker-pink: #6a5d60;
+  --dark-pink: #a89096;
+  --bgc-light: #fff;
+  --bgc-dark: #333030;
+  --bgc-dark-pink: #413034;
+  --bdr-light: #e5e5e5;
+  --h4-green-apple: #5aa851;
+  --h2-crayola: #badd7f;
+  --p-light-font: #ca7190;
+  --p-dark-font: #fff;
+  --pale-pink-font: #d86b90;
+
+  --old-font-p: #dc9aad;
+}
+
 h2 {
   font-family: "Caprasimo", sans-serif;
 }
@@ -229,6 +250,10 @@ html, body {
     justify-content: space-between;
   }
 
+  body.dark-mode .navbar-menu {
+    background-color: var(--darkest-pink);
+  }
+
   .contact-info p,
   .social-info p {
     justify-content: center;  
@@ -242,33 +267,51 @@ html, body {
 
 /* Dark Mode */
 
-#apperance-toggle {
+#moon-icon {
+  display: none;
+}
+#sun-icon {
+  display: block;
+}
+
+body.dark-mode #moon-icon {
+  display: block;
+}
+body.dark-mode #sun-icon {
+  display: none;
+}
+
+button#apperance-toggle {
   background: none;
   border: none;
 }
+#apperance-toggle img {
+  width: 30px;
+  height: 30px;
+}
 
 body.dark-mode {
-  background-color: #333030;
+  background-color: var(--bgc-dark);
 }
 
 body.dark-mode .navbar-leftstyle {
-  background-color: #3b252a;
+  background-color: var(--darkest-pink);
 }
 
 body.dark-mode .footer {
-  background-color: #3b252a;
+  background-color: var(--darkest-pink);
 }
 
 body.dark-mode .footer-container h3, body.dark-mode .footer-container p {
-  color: #fff;
+  color: var(--p-dark-font);
 }
 
 body.dark-mode h2 {
-  color: #87a05c;
+  color: var(--h2-crayola);
 }
 body.dark-mode h4 {
-  color: #439a3a;
+  color: var(--h4-green-apple);
 }
 body.dark-mode p {
-  color: #fff;
+  color: var(--p-dark-font);
 }

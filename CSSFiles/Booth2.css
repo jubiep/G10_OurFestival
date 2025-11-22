@@ -250,3 +250,39 @@
     align-items: center;
     justify-content: center;
 }
+
+/* Dark Mode */
+body.dark-mode .shopname {
+  color: var(--h2-crayola);
+}
+
+body.dark-mode .prev,
+body.dark-mode .next {
+  background-color: var(--darker-pink);
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .prev:hover,
+body.dark-mode .next:hover {
+  background-color: var(--dark-pink);
+}
+
+body.dark-mode .caption-container {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode #caption {
+  color: var(--h2-crayola);
+}
+
+body.dark-mode #caption-desc {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .rating-label p {
+  color: var(--h4-green-apple);
+}
+
+body.dark-mode .numbertext {
+  color: var(--p-dark-font);
+}

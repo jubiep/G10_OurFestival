@@ -2,24 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Quicksand:wght@300..700&display=swap");
 
-/* Variables */
-:root {
-  --bg-light-pinkest: #ff9eb6;
-  --bg-light-pinker: #ffc3d2;
-  --bg-light-pink: #ffeaef;
-  --bg-lighter-pink: #fff3f6;
-  --fbf-bgc: #fff;
-  --font-sub-sub-title: #5aa851;
-  --font-sub-title: #d86b90;
-  --font-title: #badd7f;
-  --font-p: #ca7190;
-  --old-font-p: #dc9aad;
-  --dark-font-p: #fff;
-  --bg-dark-pinkest: #433135; 
-  --bg-dark-pinker: #6e4e56;
-  --bg-dark-pink: #906771;
-}
-
 /* Global / Base Styles */
 /* I think boxshadow is good for nav */
 .navbar-leftstyle {
@@ -29,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg-lighter-pink);
+  background: var(--lighter-pink);
 }
 
 .text-muted {
@@ -58,19 +40,19 @@ body {
 
 .feedback-field :is(label) {
   font-family: "Quicksand", sans-serif;
-  color: var(--font-p);
+  color: var(--p-light-font);
 }
 
 .feedback-field :is(h2) {
-  color: var(--font-title);
+  color: var(--h2-crayola);
 }
 
 .feedback-field :is(h4) {
-  color: var(--font-sub-sub-title);
+  color: var(--h4-green-apple);
 }
 
 .feedback-field :is(p) {
-  color: var(--font-p);
+  color: var(--p-light-font);
 }
 
 .feedback-field h2,
@@ -81,7 +63,7 @@ body {
 
 /* Primary Field */
 .primary-field {
-  background-color: var(--fbf-bgc);
+  background-color: var(--bgc-light);
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -96,10 +78,10 @@ body {
 #feedback-form .form-select,
 #feedback-form textarea {
   border-radius: 6px;
-  border: 1px solid #e5e5e5;
-  background-color: #fff;
+  border: 1px solid var(--bdr-light);
+  background-color: var(--bgc-light);
   transition: 0.2s ease;
-  color: var(--font-p);
+  color: var(--p-light-font);
 }
 
 #feedback-form .form-control:focus,
@@ -117,11 +99,11 @@ body {
 input[type="radio"].form-check-input {
   width: 2em;
   height: 1em;
-  border-color: var(--bg-light-pinkest);
+  border-color: var(--light-pinkest);
 }
 
 input[type="radio"].form-check-input:checked {
-  background-color: var(--bg-light-pinkest);
+  background-color: var(--light-pinkest);
 }
 
 input[type="radio"].form-check-input:focus {
@@ -131,8 +113,8 @@ input[type="radio"].form-check-input:focus {
 
 /* Checkboxes */
 input[type="checkbox"].form-check-input {
-  background-color: var(--bg-light-pinkest);
-  border-color: var(--bg-light-pinker);
+  background-color: var(--light-pinkest);
+  border-color: var(--light-pinker);
   transition: 0.4 all ease;
 }
 
@@ -142,31 +124,31 @@ input[type="checkbox"].form-check-input:focus {
 }
 
 input[type="checkbox"].form-check-input:checked {
-  background-color: var(--font-sub-sub-title);
+  background-color: var(--h4-green-apple);
 }
 
 /* Buttons */
 #feedback-form .btn-primary {
-  background-color: var(--bg-light-pinker);
-  border-color: var(--bg-light-pinker);
+  background-color: var(--light-pinker);
+  border-color: var(--light-pinker);
   transition: all 0.4s ease;
 }
 
 #feedback-form .btn-primary:hover {
-  background-color: var(--bg-light-pinkest);
-  border-color: var(--bg-light-pinkest);
+  background-color: var(--light-pinkest);
+  border-color: var(--light-pinkest);
 }
 
 #feedback-form .btn-secondary {
   color: var(--old-font-p);
-  background-color: #fff;
-  border-color: #fff;
+  background-color: var(--bgc-light);
+  border-color: var(--bgc-light);
   transition: all 0.4 ease;
 }
 
 #feedback-form .btn-secondary:hover {
-  background-color: var(--font-sub-sub-title);
-  border-color: var(--font-sub-sub-title);
+  background-color: var(--h4-green-apple);
+  border-color: var(--h4-green-apple);
   transition: 0.4s all ease;
 }
 
@@ -175,7 +157,7 @@ input[type="checkbox"].form-check-input:checked {
 #feedback-form .btn-secondary:hover {
   scale: 1.04;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  color: #fff;
+  color: var(--p-dark-font);
 }
 
 #feedback-form .btn-primary:active,
@@ -188,14 +170,14 @@ input[type="checkbox"].form-check-input:checked {
 .a-field > .btn-secondary {
   background: none;
   border: none;
-  color: var(--font-p);
+  color: var(--p-light-font);
   transition: 0.4s all ease;
 }
 
 .a-field > .btn-primary:hover,
 .a-field > .btn-secondary:hover {
-  color: #fff;
-  background-color: var(--bg-light-pinkest);
+  color: var(--p-dark-font);
+  background-color: var(--light-pinkest);
   scale: 1.04;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
@@ -228,37 +210,37 @@ body.dark-mode .primary-field ,
 body.dark-mode #feedback-form .form-control,
 body.dark-mode #feedback-form .form-select,
 body.dark-mode #feedback-form textarea{
-  background-color: #433135;
-  border-color: var(--bg-dark-pinker);
-  color: var(--dark-font-p);
+  background-color: var(--darkest-pink);
+  border-color: var(--darker-pink);
+  color: var(--p-dark-font);
 }
 
 body.dark-mode p,
 body.dark-mode label{
-  color: var(--dark-font-p);
+  color: var(--p-dark-font);
 }
 
 /* Buttons Dark mode*/
 body.dark-mode #feedback-form .btn-primary {
-  background-color: var(--bg-dark-pinker);
-  border-color: var(--bg-dark-pinker);
+  background-color: var(--darker-pink);
+  border-color: var(--darker-pink);
 }
 
 body.dark-mode #feedback-form .btn-primary:hover {
-  background-color: var(--bg-dark-pink);
-  border-color: var(--bg-dark-pink);
+  background-color: var(--dark-pink);
+  border-color: var(--dark-pink);
 }
 
 body.dark-mode #feedback-form .btn-secondary {
-  color: var(--old-font-p);
-  background-color: var(--bg-dark-pinkest);
-  border-color: var(--bg-dark-pinkest);
+  color: var(--p-dark-font);
+  background-color: var(--darkest-pink);
+  border-color: var(--darkest-pink);
 }
 
 body.dark-mode #feedback-form .btn-secondary:hover {
-  background-color: var(--bg-dark-pink);
-  border-color: var(--bg-dark-pink);
-  color: #fff;
+  background-color: var(--dark-pink);
+  border-color: var(--dark-pink);
+  color: var(--p-dark-font);
 }
 
 /* Radio Buttons Dark mode */
@@ -267,27 +249,34 @@ body.dark-mode .form-check-inline {
 }
 
 body.dark-mode input[type="radio"].form-check-input {
-  border-color: var(--bg-dark-pinker);
+  border-color: var(--darker-pink);
   background-color: var(--bg-darker-pink);
 
 }
 
 body.dark-mode input[type="radio"].form-check-input:checked {
-  background-color: var(--bg-dark-pink);
+  background-color: var(--dark-pink);
+}
+
+/* Link Dark mode */
+
+body.dark-mode .a-field > .btn-primary,
+body.dark-mode .a-field > .btn-secondary {
+  color: var(--dark-pink);
 }
 
 body.dark-mode .a-field > .btn-primary:hover,
 body.dark-mode .a-field > .btn-secondary:hover {
-  background-color: var(--bg-dark-pink);
-  color: var(--dark-font-p);
+  background-color: var(--dark-pink);
+  color: var(--p-dark-font);
 }
 
 /* Checkboxes Dark mode*/
 body.dark-mode input[type="checkbox"].form-check-input {
-  background-color: var(--bg-dark-pinkest);
-  border-color: var(--bg-dark-pinker);
+  background-color: var(--darkest-pink);
+  border-color: var(--darker-pink);
 }
 
 body.dark-mode input[type="checkbox"].form-check-input:checked {
-  background-color: var(--font-sub-sub-title);
+  background-color: var(--h4-green-apple);
 }

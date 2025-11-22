@@ -239,3 +239,29 @@ ul {
 }
 
 
+
+/* Dark Mode */
+body.dark-mode .booth3-topic {
+  color: var(--h2-crayola);
+}
+
+body.dark-mode .topic1 {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode ul {
+  color: var(--p-dark-font);
+}
+
+body.dark-mode .img-box {
+  background-color: var(--bgc-dark-pink);
+  border-color: var(--darker-pink);
+}
+
+body.dark-mode .img-box:hover {
+  border-color: var(--dark-pink);
+}
+
+body.dark-mode .product-card h6 {
+  color: var(--h4-green-apple);
+}

@@ -70,3 +70,31 @@
     color: #d93553;
     
 }
+
+/* Dark Mode */
+body.dark-mode .bd h2 {
+    color: var(--h2-crayola);
+}
+
+body.dark-mode .sub-bd a {
+    background-color: var(--darker-pink);
+    color: var(--p-dark-font);
+}
+
+body.dark-mode .sub-bd a:hover {
+    background-color: var(--dark-pink);
+    color: var(--p-dark-font);
+}
+
+body.dark-mode #bd-1 {
+    background-color: #beb8a9;
+}
+body.dark-mode #bd-2 {
+    background-color: #b57f8c;
+}
+body.dark-mode #bd-3 {
+    background-color: #a98f95;
+}
+body.dark-mode #bd-4 {
+    background-color: #a57671;
+}
