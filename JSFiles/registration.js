@@ -13,4 +13,10 @@ document.getElementById("CafeForm").addEventListener("submit", function(e){
         ].filter(Boolean),
         message: document.getElementById("message").value
     };
+
+    fetch("PHPFiles/save_registration.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
 });
