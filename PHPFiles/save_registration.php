@@ -12,3 +12,16 @@ if (!file_exists($file)) {
     file_put_contents($file, json_encode([], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 }
 
+$existing = json_decode(file_get_contents($file), true);
+
+// เพิ่มข้อมูลใหม่
+$existing[] = $data;
+
+// เขียนกลับลงไฟล์
+file_put_contents($file, json_encode($existing, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+echo json_encode([
+    "message" => "ลงทะเบียนสำเร็จ!",
+    "status" => true
+]);
+?>
