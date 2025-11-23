@@ -16,11 +16,27 @@ body {
   margin-bottom: 5% !important;
   margin-top: 8% !important;
 }
+
+.content p {
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}
+
+#wantcenter{
+   display: flex;
+  justify-content: center;
+}
+
+.all-title {
+  margin-bottom: 10%;
+}
+
   .sidebar {
-    background: #efe6db;
+    background:#fff3f6;
     min-height: 100vh;
     padding: 2rem 1rem;
-    border-right: 2px solid #d2c3b3;
+    border-right: 2px solid #fa9fb5;
   }
   .sidebar h2 {
     font-weight: 700;
@@ -43,10 +59,10 @@ body {
     font-family: "Instrument", Serif;
     font-weight: 1000;
     font-size: 2.5rem;
-    color: #5b4332;
+    color: #d86b90;
   }
   h2.subtitle {
-    color: #7a6046;
+    color: #badd7f;
     margin-bottom: 1.5rem;
   }
   .form-label{
@@ -54,23 +70,23 @@ body {
   }
   .form-control, .form-select {
     border-radius: 10px;
-    border-color: #c9b8a7;
+    border-color: #d93553;
   }
   .btn-primary {
     font-weight: 600;
-    background-color: #7a6046;
+    background-color: #d93553;
     border: none;
     border-radius: 10px;
   }
   .btn-primary:hover {
-    background-color: #5b4332;
+    background-color: #811e30;
   }
   .btn-outline-secondary {
     border-radius: 10px;
   }
   .card {
     border: none;
-    background-color: #fffaf4;
+    background-color: #fff3f6 ;
     box-shadow: 0 0 20px rgba(0,0,0,0.08);
     border-radius: 12px;
     padding: 2rem;
