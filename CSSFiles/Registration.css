@@ -128,9 +128,7 @@ body.dark-mode .btn-primary:hover {
   background-color: var(--dark-pink);
 }
 #summarypage{
-  margin: 0% 5% 5% 5%;
+  margin: 0% 40% 5% 40%;
   width: fit-content;
   display: block; 
-  margin-left: auto;
-  width: fit-content; 
 }
