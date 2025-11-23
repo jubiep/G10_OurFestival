@@ -37,6 +37,11 @@ if (!is_dir($feedbackDir)) {
     mkdir($feedbackDir, 0755, true);
 }
 
+// Ensure file exists
+if (!is_file($filepath)) {
+    touch($filepath);
+}
+
 // Open file for reading and writing
 $fp = fopen($filepath, 'c+');
 
