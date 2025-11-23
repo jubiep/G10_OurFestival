@@ -89,8 +89,8 @@ async function loadRecentFeedback() {
                 return new Date(b.timestamp) - new Date(a.timestamp);
             });
             
-            // Show only the 10 most recent feedback entries
-            const recentFeedback = sortedFeedback.slice(0, 10);
+            // Old I want to display only 10 newer
+            const recentFeedback = sortedFeedback;
             
             recentFeedback.forEach((feedback, index) => {
                 const feedbackCard = createFeedbackCard(feedback, index + 1);
