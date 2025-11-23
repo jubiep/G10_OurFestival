@@ -1,6 +1,7 @@
 
 body {
-    font-family: 'Prompt', sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
     background: #fdfaf6 url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png');
     color: #4b3b2c;
   }
@@ -8,6 +9,9 @@ body {
   position: sticky;
 }
 
+.form-check-label {
+  font-weight: normal;
+}
 .container-fluid {
   margin-bottom: 5% !important;
   margin-top: 8% !important;
@@ -36,25 +40,24 @@ body {
     padding: 3rem;
   }
   h1.title {
-    font-family: Quicksand;
-    font-weight: 800;
+    font-family: "Instrument", Serif;
+    font-weight: 1000;
     font-size: 2.5rem;
     color: #5b4332;
   }
   h2.subtitle {
-    font-family: Quicksand;
-    font-weight: 600;
     color: #7a6046;
     margin-bottom: 1.5rem;
   }
   .form-label{
-    font-family: "Caprasimo", sans-serif;
+    font-weight: 200px;
   }
   .form-control, .form-select {
     border-radius: 10px;
     border-color: #c9b8a7;
   }
   .btn-primary {
+    font-weight: 600;
     background-color: #7a6046;
     border: none;
     border-radius: 10px;

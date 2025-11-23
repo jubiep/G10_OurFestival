@@ -443,6 +443,7 @@ main h2 {
 }
 
 .search-container {
+  font-family: "Quicksand", Serif;
   position: relative;
   display: flex;
   align-items: center;
