@@ -14,10 +14,21 @@ if (!file_exists($file)) {
 
 $existing = json_decode(file_get_contents($file), true);
 
-// เพิ่มข้อมูลใหม่
+//ตรวจเบอร์ซ้ำ
+foreach ($existing as $user) {
+    if ($user["phone"] == $data["phone"]) {
+        echo json_encode([
+            "message" => "เบอร์นี้ถูกใช้ลงทะเบียนแล้ว!!",
+            "status" => false
+        ]);
+        exit;
+    }
+}
+
+// ถ้าเบอร์ไม่ซ้ำ -> เพิ่มข้อมูลใหม่
 $existing[] = $data;
 
-// เขียนกลับลงไฟล์
+// เขียนกลับลงไฟล์ JSON
 file_put_contents($file, json_encode($existing, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 echo json_encode([
