@@ -5,9 +5,13 @@
   box-sizing: border-box;
 }
 
+body {
+  padding-top: 120px; 
+}
 .navbar-leftstyle {
-  position: sticky;
-  margin-bottom: 5%;
+  position: fixed !important;
+  top: 0;
+  left: 0;
 }
 
 .shopname {
