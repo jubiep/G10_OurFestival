@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
-$regFile = __DIR__ . '/JSONFiles/registration.json';
+$regFile = __DIR__ . '/../JSONFiles/registration_data.json';
 
 if (!file_exists($regFile)) {
     die("<h2>No registration data found.</h2>");
