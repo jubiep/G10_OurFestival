@@ -1,6 +1,15 @@
 document.getElementById("cafeForm").addEventListener("submit", function(e){
     e.preventDefault();
 
+    //Email pattern validation
+    const email = document.getElementById("email").value;
+    const emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailpattern.test(email)) {
+        alert("รูปแบบอีเมล์ไม่ถูกต้อง");
+        return;
+    }
+
     let data = {
         firstname: document.getElementById("firstname").value,
         lastname: document.getElementById("lastname").value,
@@ -13,7 +22,8 @@ document.getElementById("cafeForm").addEventListener("submit", function(e){
         ].filter(Boolean),
         message: document.getElementById("message").value
     };
-
+    
+    // put to PHP
     fetch("PHPFiles/save_registration.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
