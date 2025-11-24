@@ -5,12 +5,22 @@ header("Content-Type: application/json");
 $data = json_decode(file_get_contents("php://input"), true);
 
 // ไฟล์​  JSON ที่เก็บข้อมูล
-$file = "../JSONFiles/registration_data.json";
+$dir = __DIR__ . "/../JSONFiles/";
+$file = $dir . "registration_data.json";
+
+if(!is_dir($dir)) {
+    mkdir($dir, 0755, true);
+}
+
+if(!is_file($file)) {
+    touch($file, 0755);
+}
 
 // ถ้าไฟล์ยังไม่มีให้สร้าง
 if (!file_exists($file)) {
     file_put_contents($file, json_encode([], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 }
+
 
 $existing = json_decode(file_get_contents($file), true);
 
@@ -18,7 +28,7 @@ $existing = json_decode(file_get_contents($file), true);
 foreach ($existing as $user) {
     if ($user["phone"] == $data["phone"]) {
         echo json_encode([
-            "message" => "เบอร์นี้ถูกใช้ลงทะเบียนแล้ว!!",
+            "message" => "This phone number is used!!",
             "status" => false
         ]);
         exit;
@@ -32,7 +42,7 @@ $existing[] = $data;
 file_put_contents($file, json_encode($existing, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 echo json_encode([
-    "message" => "ลงทะเบียนสำเร็จ!",
+    "message" => "Successful!",
     "status" => true
 ]);
 ?>

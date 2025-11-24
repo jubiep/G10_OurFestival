@@ -143,9 +143,3 @@ body.dark-mode .form-select {
   border-color: var(--darker-pink);
   color: var(--p-dark);
 }
-
-#summarypage{
-  margin: 0% 40% 5% 40%;
-  width: fit-content;
-  display: block; 
-}

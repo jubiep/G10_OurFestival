@@ -39,7 +39,7 @@ if (!is_dir($feedbackDir)) {
 
 // Ensure file exists
 if (!is_file($filepath)) {
-    touch($filepath);
+    touch($filepath, 0755);
 }
 
 // Open file for reading and writing

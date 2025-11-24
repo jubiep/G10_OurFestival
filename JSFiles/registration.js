@@ -6,7 +6,7 @@ document.getElementById("cafeForm").addEventListener("submit", function(e){
     const emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailpattern.test(email)) {
-        alert("รูปแบบอีเมล์ไม่ถูกต้อง");
+        alert("Invalid Email Pattern!");
         return;
     }
 
@@ -31,6 +31,11 @@ document.getElementById("cafeForm").addEventListener("submit", function(e){
     })
     .then(res => res.json())
     .then(result => {
+        document.getElementById('cafeForm').reset();
         alert(result.message);
+    })
+    .catch(error => {
+        console.log('error' + error);
+        alert('Failed to save the data.');
     });
 });

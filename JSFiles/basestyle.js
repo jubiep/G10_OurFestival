@@ -38,6 +38,13 @@ function toggleTheme() {
 
 function loadTheme() {
   const savedTheme = localStorage.getItem(STORAGE_KEY);
+  
+  // Match the system theme
+  const preferredDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (preferredDark && savedTheme !== "light") {
+    body.classList.add("dark-mode");
+  }
 
   // Check localStorage key >> set up to key
   if (savedTheme === "dark") {
@@ -48,12 +55,6 @@ function loadTheme() {
     return;
   }
 
-  // Match the system theme
-  // const preferredDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  // if (preferDark && savedTheme !== "light") {
-  //   body.classList.add("dark-mode");
-  // }
 }
 
 loadTheme();

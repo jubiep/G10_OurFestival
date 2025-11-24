@@ -1,4 +1,5 @@
 const feedbackForm = document.getElementById('feedback-form');
+const recentForms = document.getElementById('feedback-list');
 
 // Handle form submission
 document.addEventListener('DOMContentLoaded', function() {
@@ -7,7 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Load and display recent feedback on page load
-    loadRecentFeedback();
+    // Check first if have feedback-list then do this
+    if (recentForms) {
+        loadRecentFeedback();
+    }
 });
 
 // Function to handle form submission
@@ -97,11 +101,11 @@ async function loadRecentFeedback() {
                 feedbackList.appendChild(feedbackCard);
             });
         } else {
-            feedbackList.innerHTML = '<p>No feedback submitted yet. Be the first to leave feedback!</p>';
+            feedbackList.innerHTML = '<p>No feedback submitted yet. Try to be first? This is a chance!</p>';
         }
     } catch (error) {
         console.error('Error loading feedback:', error);
-        feedbackList.innerHTML = '<p>Error loading feedback. Please try again later.</p>';
+        feedbackList.innerHTML = '<p>Error loading feedback.</p>';
     }
 }
 
