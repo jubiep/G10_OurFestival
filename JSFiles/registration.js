@@ -1,4 +1,4 @@
-document.getElementById("CafeForm").addEventListener("submit", function(e){
+document.getElementById("cafeForm").addEventListener("submit", function(e){
     e.preventDefault();
 
     let data = {
