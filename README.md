@@ -13,3 +13,11 @@
 |9|วิรากร ธนบัตร|6809617415|
 |10|สุกฤษฏิ์ ทองศรี|6809617472|
 ||||
+
+## Additional
+มีบางสามาชิกบางคนภายในกลุ่มที่ไม่ได้ใช้ git username ตรงกับ github username ซึ่งอาจจะทำให้อาจารย์หรือพี่ T.A. เข้าใจผิดว่ามีสมาชิกบางคนภายในกลุ่มไม่ได้ commit, จึงอยากใช้พื้นที่ส่วนเล็กๆตรงนี้เพื่อชี้แจงว่าสมาชิกที่เหลืออีก 2 คนมี github username อะไรกันบ้าง  
+
+|Git Username|GitHub Username|
+|-|-|
+|kodchaporn phdungkittiwong|Kodchaporn-phadungkittiwong|
+|Narabodee|Narabodee21|
