@@ -102,6 +102,14 @@ p {
 }
 .tooltip {
   z-index: 20000000 !important;
+  left: auto !important;
+}
+@media (hover: none) and (pointer: coarse) {
+  .tooltip {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
 }
 @media (max-width: 1200px) {
   .navbar-leftstyle {
