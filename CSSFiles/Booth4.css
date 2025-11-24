@@ -293,12 +293,12 @@ body.dark-mode {
 }
 
 body.dark-mode .description {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .category-buttons button {
   background-color: var(--darker-pink);
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .category-buttons button:hover {
@@ -315,10 +315,10 @@ body.dark-mode .img-box:hover {
 }
 
 body.dark-mode .product-card h3 {
-  color: var(--h4-green-apple);
+  color: var(--h4);
 }
 
 body.dark-mode .product-card p {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 

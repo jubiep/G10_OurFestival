@@ -40,19 +40,19 @@ body {
 
 .feedback-field :is(label) {
   font-family: "Quicksand", sans-serif;
-  color: var(--p-light-font);
+  color: var(--p-light);
 }
 
 .feedback-field :is(h2) {
-  color: var(--h2-crayola);
+  color: var(--h2);
 }
 
 .feedback-field :is(h4) {
-  color: var(--h4-green-apple);
+  color: var(--h4);
 }
 
 .feedback-field :is(p) {
-  color: var(--p-light-font);
+  color: var(--p-light);
 }
 
 .feedback-field h2,
@@ -81,7 +81,7 @@ body {
   border: 1px solid var(--bdr-light);
   background-color: var(--bgc-light);
   transition: 0.2s ease;
-  color: var(--p-light-font);
+  color: var(--p-light);
 }
 
 #feedback-form .form-control:focus,
@@ -124,31 +124,31 @@ input[type="checkbox"].form-check-input:focus {
 }
 
 input[type="checkbox"].form-check-input:checked {
-  background-color: var(--h4-green-apple);
+  background-color: var(--h4);
 }
 
 /* Buttons */
 #feedback-form .btn-primary {
-  background-color: var(--light-pinker);
-  border-color: var(--light-pinker);
+  background-color: var(--h4);
+  border-color: var(--h4);
   transition: all 0.4s ease;
 }
 
 #feedback-form .btn-primary:hover {
-  background-color: var(--light-pinkest);
-  border-color: var(--light-pinkest);
+  background-color: var(--darker-green-apple);
+  border-color: var(--darker-green-apple);
 }
 
 #feedback-form .btn-secondary {
-  color: var(--old-font-p);
+  color: var(--lighter-pinker);
   background-color: var(--bgc-light);
   border-color: var(--bgc-light);
   transition: all 0.4 ease;
 }
 
 #feedback-form .btn-secondary:hover {
-  background-color: var(--h4-green-apple);
-  border-color: var(--h4-green-apple);
+  background-color: var(--light-pinkest);
+  border-color: var(--light-pinkest);
   transition: 0.4s all ease;
 }
 
@@ -157,7 +157,7 @@ input[type="checkbox"].form-check-input:checked {
 #feedback-form .btn-secondary:hover {
   scale: 1.04;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 #feedback-form .btn-primary:active,
@@ -170,13 +170,13 @@ input[type="checkbox"].form-check-input:checked {
 .a-field > .btn-secondary {
   background: none;
   border: none;
-  color: var(--p-light-font);
+  color: var(--p-light);
   transition: 0.4s all ease;
 }
 
 .a-field > .btn-primary:hover,
 .a-field > .btn-secondary:hover {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
   background-color: var(--light-pinkest);
   scale: 1.04;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -212,27 +212,27 @@ body.dark-mode #feedback-form .form-select,
 body.dark-mode #feedback-form textarea{
   background-color: var(--darkest-pink);
   border-color: var(--darker-pink);
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode p,
 body.dark-mode label{
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 /* Buttons Dark mode*/
 body.dark-mode #feedback-form .btn-primary {
-  background-color: var(--darker-pink);
-  border-color: var(--darker-pink);
+  background-color: var(--darker-greener-apple);
+  border-color: var(--darker-greener-apple);
 }
 
 body.dark-mode #feedback-form .btn-primary:hover {
-  background-color: var(--dark-pink);
-  border-color: var(--dark-pink);
+  background-color: var(--h4);
+  border-color: var(--h4);
 }
 
 body.dark-mode #feedback-form .btn-secondary {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
   background-color: var(--darkest-pink);
   border-color: var(--darkest-pink);
 }
@@ -240,7 +240,7 @@ body.dark-mode #feedback-form .btn-secondary {
 body.dark-mode #feedback-form .btn-secondary:hover {
   background-color: var(--dark-pink);
   border-color: var(--dark-pink);
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 /* Radio Buttons Dark mode */
@@ -268,7 +268,7 @@ body.dark-mode .a-field > .btn-secondary {
 body.dark-mode .a-field > .btn-primary:hover,
 body.dark-mode .a-field > .btn-secondary:hover {
   background-color: var(--dark-pink);
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 /* Checkboxes Dark mode*/
@@ -278,5 +278,5 @@ body.dark-mode input[type="checkbox"].form-check-input {
 }
 
 body.dark-mode input[type="checkbox"].form-check-input:checked {
-  background-color: var(--h4-green-apple);
+  background-color: var(--h4);
 }

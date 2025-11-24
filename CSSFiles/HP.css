@@ -644,19 +644,19 @@ body.dark-mode .text-bg {
 }
 
 body.dark-mode .hero-text h1 {
-  color: var(--h2-crayola);
+  color: var(--green-apple);
 }
 
 body.dark-mode .hero-text h3 {
-  color: var(--p-dark-font);
+  color: var(--pale-pink);
 }
 
 body.dark-mode .box h4 {
-  color: var(--h4-green-apple);
+  color: var(--h4);
 }
 
 body.dark-mode .box p {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 /* body.dark-mode .cate-area,
@@ -666,11 +666,11 @@ body.dark-mode .cate {
 } */
 
 body.dark-mode .cate h4 {
-  color: var(--p-dark-font); /* Ensure visibility on potentially dark backgrounds if changed, or just keep consistent */
+  color: var(--p-dark); /* Ensure visibility on potentially dark backgrounds if changed, or just keep consistent */
 }
 
 body.dark-mode .cate p {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .search-container {
@@ -679,20 +679,24 @@ body.dark-mode .search-container {
 }
 
 body.dark-mode .search-container input {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .search-container i {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .name-role p,
 body.dark-mode .name-role h4 {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .role {
   background-color: var(--bgc-dark-pink);
+}
+
+body.dark-mode .four-cate-text {
+  color: var(--pale-pink);
 }
 
 body.dark-mode #cate-1 {

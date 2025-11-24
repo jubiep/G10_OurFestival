@@ -2,6 +2,7 @@
   --light-pinkest: #ff9eb6;
   --light-pinker: #ffc3d2;
   --light-pink: #ffeaef;
+  --lighter-pinker: #dc9aad;
   --lighter-pink: #fff3f6;
   --darkest-pink: #43393b; 
   --darker-pink: #6a5d60;
@@ -10,13 +11,17 @@
   --bgc-dark: #333030;
   --bgc-dark-pink: #413034;
   --bdr-light: #e5e5e5;
-  --h4-green-apple: #5aa851;
-  --h2-crayola: #badd7f;
-  --p-light-font: #ca7190;
-  --p-dark-font: #fff;
-  --pale-pink-font: #d86b90;
-
-  --old-font-p: #dc9aad;
+  --h4: #5aa851;
+  --green-apple: #5aa851;
+  --darker-green-apple: #417a3b;
+  --darker-greener-apple: #2c7824;
+  --darkest-green-apple: #274924;
+  --h2: #badd7f;
+  --crayola: #badd7f;
+  --p-light: #ca7190;
+  --p-dark: #fff;
+  --pale-pink: #d86b90;
+  --amaranth-pink: #fa9fb5;
 }
 
 h2 {
@@ -303,15 +308,15 @@ body.dark-mode .footer {
 }
 
 body.dark-mode .footer-container h3, body.dark-mode .footer-container p {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode h2 {
-  color: var(--h2-crayola);
+  color: var(--h2);
 }
 body.dark-mode h4 {
-  color: var(--h4-green-apple);
+  color: var(--h4);
 }
 body.dark-mode p {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }

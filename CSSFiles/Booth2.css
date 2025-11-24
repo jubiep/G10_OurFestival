@@ -253,13 +253,13 @@
 
 /* Dark Mode */
 body.dark-mode .shopname {
-  color: var(--h2-crayola);
+  color: var(--h2);
 }
 
 body.dark-mode .prev,
 body.dark-mode .next {
   background-color: var(--darker-pink);
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .prev:hover,
@@ -268,21 +268,21 @@ body.dark-mode .next:hover {
 }
 
 body.dark-mode .caption-container {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode #caption {
-  color: var(--h2-crayola);
+  color: var(--h2);
 }
 
 body.dark-mode #caption-desc {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .rating-label p {
-  color: var(--h4-green-apple);
+  color: var(--h4);
 }
 
 body.dark-mode .numbertext {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }

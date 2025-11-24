@@ -73,17 +73,17 @@
 
 /* Dark Mode */
 body.dark-mode .bd h2 {
-    color: var(--h2-crayola);
+    color: var(--h2);
 }
 
 body.dark-mode .sub-bd a {
     background-color: var(--darker-pink);
-    color: var(--p-dark-font);
+    color: var(--p-dark);
 }
 
 body.dark-mode .sub-bd a:hover {
     background-color: var(--dark-pink);
-    color: var(--p-dark-font);
+    color: var(--p-dark);
 }
 
 body.dark-mode #bd-1 {

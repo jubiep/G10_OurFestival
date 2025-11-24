@@ -242,15 +242,15 @@ ul {
 
 /* Dark Mode */
 body.dark-mode .booth3-topic {
-  color: var(--h2-crayola);
+  color: var(--h2);
 }
 
 body.dark-mode .topic1 {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode ul {
-  color: var(--p-dark-font);
+  color: var(--p-dark);
 }
 
 body.dark-mode .img-box {
@@ -263,5 +263,5 @@ body.dark-mode .img-box:hover {
 }
 
 body.dark-mode .product-card h6 {
-  color: var(--h4-green-apple);
+  color: var(--h4);
 }
