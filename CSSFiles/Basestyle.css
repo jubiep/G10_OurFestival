@@ -23,6 +23,10 @@
   --pale-pink: #d86b90;
   --amaranth-pink: #fa9fb5;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
 
 h2 {
   font-family: "Caprasimo", sans-serif;
@@ -36,6 +40,7 @@ p {
 .body {
   background-color: #fff3f6;
 }
+
 .navbar-leftstyle {
   width: 65%;
   background-color: #ffc3d2;
@@ -49,6 +54,7 @@ p {
   left: 0;
   z-index: 10000000;
   overflow-x: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* I think shadow is good for nav */
 }
 
 .navbar-logo {
@@ -263,16 +269,13 @@ html, body {
     justify-content: space-between;
   }
 
-  body.dark-mode .navbar-menu {
-    background-color: var(--darkest-pink);
-  }
-
+  
   .contact-info p,
   .social-info p {
     justify-content: center;  
     font-size: 0.9rem;
   }
-
+  
   html, body {
     overflow-x: hidden !important;
   }
@@ -308,6 +311,10 @@ body.dark-mode {
 }
 
 body.dark-mode .navbar-leftstyle {
+  background-color: var(--darkest-pink);
+}
+
+body.dark-mode .navbar-menu {
   background-color: var(--darkest-pink);
 }
 

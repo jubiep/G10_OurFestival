@@ -3,10 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caprasimo&family=Quicksand:wght@300..700&display=swap");
 
 /* Global / Base Styles */
-/* I think boxshadow is good for nav */
-.navbar-leftstyle {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
 
 body {
   margin: 0;
