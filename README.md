@@ -19,5 +19,5 @@
 
 |Git Username|GitHub Username|
 |-|-|
-|kodchaporn phdungkittiwong|Kodchaporn-phadungkittiwong|
+|kodchaporn phdungkittiwong|kodchaporn-phdungkittiwong|
 |Narabodee|Narabodee21|
