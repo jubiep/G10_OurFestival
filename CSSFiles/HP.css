@@ -26,6 +26,7 @@ main h2 {
   font-size: 2rem;
   margin-top: 70px;
   text-align: center;
+  margin-top: 110px;
 }
 .info-section {
   display: flex;
@@ -83,7 +84,6 @@ main h2 {
 @media (max-width: 576px) {
   .drink-img {
     width: 150px;
-    margin-top: 40px;
   }
 
   .info-section {
@@ -97,6 +97,7 @@ main h2 {
 
   main h2 {
     font-size: 1.6rem;
+    margin-top: 70px !important;
   }
 }
 .four-cate h2 {
